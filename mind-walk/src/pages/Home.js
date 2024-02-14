@@ -1,9 +1,15 @@
 import React from 'react';
-
 // import { BiArrowClockwise, BiCamera, BiChat, BiCart } from 'react-icons/bi'; // Import Bootstrap icons
 import { Link } from 'react-router-dom';
-
+import { Navigation } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import '/Users/carternadain/Desktop/Mind-Walk/mind-walk/src/pages/style.css';
 const Home = () => {
+ 
+
+
   return (
     <div>
       {/* Navigation Bar */}
@@ -60,39 +66,36 @@ const Home = () => {
       </div>
 
       {/* Features Section */}
-      <section id="features" className="container mt-5">
-        <div className="row">
-          <div className="col-md-4">
-            <div className="feature text-center">
-              <img src="path/to/stress_image.jpg" alt="Stress Relief"/>
-              <h2>Stress Relief</h2>
-              <p>Explore guided meditations and breathing exercises to find inner calm and reduce stress.</p>
-            </div>
-          </div>
-
-          <div className="col-md-4">
-            <div className="feature text-center">
-              <img src="path/to/pressure_image.jpg" alt="Pressure Management"/>
-              <h2>Pressure Management</h2>
-              <p>Learn techniques to manage external pressures and maintain balance in your daily life.</p>
-            </div>
-          </div>
-
-          <div className="col-md-4">
-            <div className="feature text-center">
-              <img src="path/to/self_image_image.jpg" alt="Positive Self-Image"/>
-              <h2>Positive Self-Image</h2>
-              <p>Build a positive self-image through affirmations, self-reflection, and personal growth.</p>
-            </div>
-          </div>
+      <section>
+      <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
+      <SwiperSlide>
+        <div className="feature text-center">
+          <img src="path/to/stress_image.jpg" alt="Stress Relief"/>
+          <h2>Stress Relief</h2>
+          <p>Explore guided meditations and breathing exercises to find inner calm and reduce stress.</p>
         </div>
-      </section>
-
-      {/* Call-to-Action Section */}
-      <section id="cta" className="text-center mt-5">
-        <p>Embark on a journey towards a healthier mind and a more fulfilling life.</p>
-        <a href="#download" className="btn btn-primary">Download Now</a>
-      </section>
+      </SwiperSlide>
+      
+      <SwiperSlide>
+        <div className="feature text-center">
+          <img src="path/to/pressure_image.jpg" alt="Pressure Management"/>
+          <h2>Pressure Management</h2>
+          <p>Learn techniques to manage external pressures and maintain balance in your daily life.</p>
+        </div>
+      </SwiperSlide>
+      
+      <SwiperSlide>
+        <div className="feature text-center">
+          <img src="path/to/self_image_image.jpg" alt="Positive Self-Image"/>
+          <h2>Positive Self-Image</h2>
+          <p>Build a positive self-image through affirmations, self-reflection, and personal growth.</p>
+        </div>
+      </SwiperSlide>
+      
+      {/* Add more SwiperSlides for additional content if needed */}
+    </Swiper>
+    </section>
+     
 
       {/* Footer Section */}
       <footer className="text-dark py-4">
