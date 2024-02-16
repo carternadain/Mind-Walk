@@ -24,10 +24,20 @@
 
   .head {
       display: flex;
-      float: left;
+      justify-content: flex-end;
+      align-items: center;
+      height: 100vh;
   
   }
+  
   .mind{
-   height: 100px;
-   width: 100px;
+   height: 600px;
+   width: 600px;
+   object-fit: contain;
   }
+
+  .header-text {
+    text-align: left;
+    margin-left: 0;
+  }
+

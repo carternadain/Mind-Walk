@@ -6,17 +6,18 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import '/Users/user/Desktop//projects/Mind-Walk/mind-walk/src/pages/style.css';
-import image1 from '../images/mindwalkheader.png'
+import image1 from '../images/mindwalkheader.png';
 
 const Home = () => {
  
-
 
   return (
     <div>
       {/* Navigation Bar */}
       <nav className="navbar navbar-expand-lg navbar-light bg-">
-        <a className="navbar-brand" href="#">Mind Walk</a>
+        <a className="navbar-brand" href="#">
+          Mind Walk
+        </a>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
@@ -57,12 +58,10 @@ const Home = () => {
       </nav>
 
       {/* Header Section */}
-      <div className="container mt-5 head">
+      <div className="container mt-5">
         <div className="row">
           <div className="col-12">
-            <header className="text-left mt-5">
-              <p>A place to clear your head</p>
-            </header>
+          <p className="header-text">A place to clear your head</p>
           </div>
         </div>
       </div>
@@ -101,9 +100,7 @@ const Home = () => {
     <div className="container mt-5 head">
         <div className="row">
           <div className="col-12">
-            <header className="text-left mt-5">
             <img className='mind' src={image1} alt="Stress Relief"/>
-            </header>
           </div>
         </div>
       </div>
