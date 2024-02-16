@@ -6,6 +6,8 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import '/Users/carternadain/Desktop/Mind-Walk/mind-walk/src/pages/style.css';
+import image1 from '../images/mindwalkheader.png'
+
 const Home = () => {
  
 
@@ -55,7 +57,7 @@ const Home = () => {
       </nav>
 
       {/* Header Section */}
-      <div className="container mt-5">
+      <div className="container mt-5 head">
         <div className="row">
           <div className="col-12">
             <header className="text-left mt-5">
@@ -95,7 +97,16 @@ const Home = () => {
       {/* Add more SwiperSlides for additional content if needed */}
     </Swiper>
     </section>
-     
+
+    <div className="container mt-5 head">
+        <div className="row">
+          <div className="col-12">
+            <header className="text-left mt-5">
+            <img className='mind' src={image1} alt="Stress Relief"/>
+            </header>
+          </div>
+        </div>
+      </div>
 
       {/* Footer Section */}
       <footer className="text-dark py-4">
