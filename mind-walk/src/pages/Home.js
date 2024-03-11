@@ -5,7 +5,7 @@ import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import '/Users/user/Desktop//projects/Mind-Walk/mind-walk/src/pages/style.css';
+import '/Users/carternadain/Desktop/Mind-Walk/mind-walk/src/pages/style.css';
 import image1 from '../images/mindwalkheader.png';
 
 const Home = () => {
