@@ -9,7 +9,6 @@
     font-size: 18px;
     background: #fff;
   
-    /* Center slide text vertically */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -27,17 +26,33 @@
       justify-content: flex-end;
       align-items: center;
       height: 100vh;
-  
+      position: relative;
+      
   }
   
   .mind{
-   height: 600px;
-   width: 600px;
+   height: 1500px;
+   width: 1500px;
    object-fit: contain;
+   position: absolute;
+   right: 0;
+   top: 50%;
+   transform: translateY(-50%);
+   margin-right: -300px;
+  }
+
+  .container {
+    text-align: left;
+    margin-left: 0;
+    float: left;
   }
 
   .header-text {
-    text-align: left;
-    margin-left: 0;
+    margin-top: -50px;
   }
 
+  .mindwalk-text {
+    font-size: 44px; 
+   }
+
+  

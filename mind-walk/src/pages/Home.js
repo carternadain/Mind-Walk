@@ -15,7 +15,7 @@ const Home = () => {
     <div>
       {/* Navigation Bar */}
       <nav className="navbar navbar-expand-lg navbar-light bg-">
-        <a className="navbar-brand" href="#">
+        <a className="mindwalk-text" href="#">
           Mind Walk
         </a>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -106,7 +106,7 @@ const Home = () => {
       </div>
 
       {/* Footer Section */}
-      <footer className="text-dark py-4">
+      <footer className="text-dark py-4 footer-custom">
         <div className="container">
           <div className="row">
             {/* Left side with unordered list */}
