@@ -5,7 +5,7 @@ import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import '/Users/user/Desktop//projects/Mind-Walk/mind-walk/src/pages/style.css';
+import '/Users/carternadain/Desktop/Mind-Walk/mind-walk/src/pages/style.css';
 import image1 from '../images/mindwalkheader.png';
 
 const Home = () => {
@@ -121,12 +121,10 @@ const Home = () => {
 
             {/* Right side with social media icons */}
             <div className="col-md-6 text-right">
-              {/* Adjust the links and images accordingly */}
-              {/* <a href="#" className="text-dark mx-2"><BiArrowClockwise /></a>
-              <a href="#" className="text-dark mx-2"><BiCamera /></a>
-              <a href="#" className="text-dark mx-2"><BiChat /></a>
-              <a href="#" className="text-dark mx-2"><BiCart /></a> */}
-              {/* Add more social media icons as needed */}
+            <i class="mx-2 bi bi-arrow-clockwise"></i>
+            <i class="mx-2 bi bi-camera"></i>
+            <i class="mx-2 bi bi-chat-dots"></i>
+            <i class="mx-2 bi bi-cart2"></i>
             </div>
           </div>
         </div>
