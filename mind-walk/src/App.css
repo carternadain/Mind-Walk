@@ -42,3 +42,26 @@
   position: absolute;
 }
 
+.hero-section {
+  background-color: #ffffff;
+  padding: 50px 0;
+}
+
+.hero-section h1 {
+  font-size: 2.5rem;
+}
+
+.hero-section p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.hero-section .btn {
+  font-size: 1.1rem;
+}
+
+.blank-square {
+  background-color: #000000;
+  width: 200px;
+  height: 200px;
+}

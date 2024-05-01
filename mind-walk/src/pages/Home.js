@@ -13,64 +13,78 @@ const Home = () => {
 
   return (
     <div>
-      {/* Navigation Bar */}
-      <nav className="navbar navbar-expand-lg navbar-light bg-">
-        <a className="mindwalk-text" href="#">
-          Mind Walk
-        </a>
-        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav ml-auto">
-            <li>
-              <form className="form-inline my-2 my-lg-0">
-                <div className="input-group">
-                  <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
-                  <div className="input-group-append">
-                    {/* <button className="btn btn-outline-success" type="submit">
-                      <BiSearch /> {/* Using Bootstrap icon */}
-                    {/* </button> */}
-                  </div>
-                </div>
-              </form>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#features">Login</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#cta">Register</a>
-            </li>
-            <li className="nav-item dropdown">
-              <a className="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Dropdown
-              </a>
-              <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                <Link className="dropdown-item" to="/">Home</Link>
-                <Link className="dropdown-item" to="/stress-relief">Stress Relief</Link>
-                <Link className="dropdown-item" to="/pressure-management">Pressure Management</Link>
-                <Link className="dropdown-item" to="/positive-self-image">Positive Self-Image</Link>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </nav>
+    {/* Navigation Bar */}
+    <nav className="navbar navbar-expand-lg navbar-light bg-">
+      {/* Mind Walk logo/text on the left */}
+      <a className="mindwalk-text navbar-brand" href="#">
+        Mind Walk
+      </a>
+  
+      {/* Toggler button for mobile view */}
+      <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span className="navbar-toggler-icon"></span>
+      </button>
+  
+      {/* Links and form */}
+      <div className="collapse navbar-collapse" id="navbarNav">
+        <ul className="navbar-nav mx-auto">
+          {/* Links for stress relief, pressure management, and positive self-image */}
+          <li className="nav-item">
+            <a className="nav-link" href="#stress-relief">Stress Relief</a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link" href="#pressure-management">Pressure Management</a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link" href="#positive-self-image">Positive Self-Image</a>
+          </li>
+        </ul>
+  
+        {/* Login and Get Started buttons on the right */}
+        <ul className="navbar-nav ml-auto">
+          <li className="nav-item">
+            <a className="nav-link" href="#login">Login</a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link" href="#get-started">Get Started</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div className="hero-section">
+      <div className="container">
+        <div className="row align-items-center">
+          {/* Left Side */}
+          <div className="col-md-6">
+            <h1>This is a Self Help App</h1>
+            <p>Empowering you to overcome challenges and discover your true potential.</p>
+            <button className="btn btn-primary">Get Started</button>
+          </div>
 
-      {/* Header Section */}
-      <div className="container mt-5">
-        <div className="row">
-          <div className="col-12">
-          <p className="header-text">A place to clear your head</p>
+          {/* Right Side */}
+          <div className="col-md-6">
+            <div className="blank-square"></div>
           </div>
         </div>
       </div>
-
-      {/* Features Section */}
-      <section>
+    </div>
+  
+    <div className="feature-section py-5">
+      <div className="container">
+        <div className="row">
+          <div className="col-md-12 text-center">
+            <h2>Unlock Your Potential with Mind Walk</h2>
+            <p>Experience a transformative journey towards a happier and more fulfilling life.</p>
+            <button className="btn btn-primary">Try Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section>
       <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
       <SwiperSlide>
-        <div className="feature text-center">
+        <div className="feature text-center py-5">
           <img src="path/to/stress_image.jpg" alt="Stress Relief"/>
           <h2>Stress Relief</h2>
           <p>Explore guided meditations and breathing exercises to find inner calm and reduce stress.</p>
@@ -97,13 +111,51 @@ const Home = () => {
     </Swiper>
     </section>
 
-    <div className="container mt-5 head">
-        <div className="row">
-          <div className="col-12">
-            <img className='mind' src={image1} alt="Stress Relief"/>
+    <div className="features-section py-5">
+      <div className="container">
+        <h2 className="text-center ">Key Features</h2>
+        <div className="row mt-4">
+          <div className="col-md-4">
+            <h3>Feature 1</h3>
+            <p>Description of feature 1.</p>
+          </div>
+          <div className="col-md-4">
+            <h3>Feature 2</h3>
+            <p>Description of feature 2.</p>
+          </div>
+          <div className="col-md-4">
+            <h3>Feature 3</h3>
+            <p>Description of feature 3.</p>
           </div>
         </div>
       </div>
+    </div>
+    <div className="testimonials-section py-5">
+      <div className="container ">
+        <h2 className="text-center ">What Our Users Say</h2>
+        <div className="row">
+          <div className="col-md-4 mt-4">
+            <div className="testimonial">
+              <p>Testimonial 1 from a satisfied user.</p>
+              <p>- User 1</p>
+            </div>
+          </div>
+          <div className="col-md-4 mt-4">
+            <div className="testimonial">
+              <p>Testimonial 2 from another satisfied user.</p>
+              <p>- User 2</p>
+            </div>
+          </div>
+          <div className="col-md-4 mt-4">
+            <div className="testimonial">
+              <p>Testimonial 3 from another happy user.</p>
+              <p>- User 3</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
 
       {/* Footer Section */}
       <footer className="text-dark py-4 footer-custom">
