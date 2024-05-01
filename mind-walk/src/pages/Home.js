@@ -6,7 +6,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import '/Users/carternadain/Desktop/Mind-Walk/mind-walk/src/pages/style.css';
-import image1 from '../images/mindwalkheader.png';
+import zenImage from '../images/zen.jpg';
 
 const Home = () => {
  
@@ -53,22 +53,24 @@ const Home = () => {
       </div>
     </nav>
     <div className="hero-section">
-      <div className="container">
-        <div className="row align-items-center">
-          {/* Left Side */}
-          <div className="col-md-6">
-            <h1>This is a Self Help App</h1>
-            <p>Empowering you to overcome challenges and discover your true potential.</p>
-            <button className="btn btn-primary">Get Started</button>
-          </div>
+  <div className="container">
+    <div className="row align-items-center">
+      {/* Left Side */}
+      <div className="col-md-6 text-center">
+        <h1>Discover Your Potential with Mind Walk</h1>
+        <p>Mind Walk is your personal guide to conquering obstacles, nurturing your well-being, and unlocking your true potential. Embark on a transformative journey towards a happier and more fulfilling life.</p>
+        <button className="btn btn-primary">Get Started</button>
+      </div>
 
-          {/* Right Side */}
-          <div className="col-md-6">
-            <div className="blank-square"></div>
-          </div>
+      {/* Right Side */}
+      <div className="col-md-6">
+        <div className="blank-square">
+        <img src={zenImage} alt="Zen" className="img-fluid" />
         </div>
       </div>
     </div>
+  </div>
+</div>
   
     <div className="feature-section py-5">
       <div className="container">
@@ -113,17 +115,17 @@ const Home = () => {
 
     <div className="features-section py-5">
       <div className="container">
-        <h2 className="text-center ">Key Features</h2>
-        <div className="row mt-4">
-          <div className="col-md-4">
+        <h2 className="text-center mb-4">Key Features</h2>
+        <div className="d-flex justify-content-center align-items-center flex-column"> 
+          <div className="col-md-4 mb-4 text-center"> 
             <h3>Feature 1</h3>
             <p>Description of feature 1.</p>
           </div>
-          <div className="col-md-4">
+          <div className="col-md-4 mb-4 text-center"> 
             <h3>Feature 2</h3>
             <p>Description of feature 2.</p>
           </div>
-          <div className="col-md-4">
+          <div className="col-md-4 mb-4 text-center"> 
             <h3>Feature 3</h3>
             <p>Description of feature 3.</p>
           </div>
