@@ -60,3 +60,8 @@
   font-size: 1.1rem;
 }
 
+.testimonial-box {
+  border: 1px solid #ccc; /* Add an outlined border */
+  padding: 20px; /* Add padding for space inside the box */
+  border-radius: 10px;
+}

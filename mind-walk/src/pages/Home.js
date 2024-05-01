@@ -114,50 +114,57 @@ const Home = () => {
     </section>
 
     <div className="features-section py-5">
-      <div className="container">
-        <h2 className="text-center mb-4">Key Features</h2>
-        <div className="d-flex justify-content-center align-items-center flex-column"> 
-          <div className="col-md-4 mb-4 text-center"> 
-            <h3>Feature 1</h3>
-            <p>Description of feature 1.</p>
-          </div>
-          <div className="col-md-4 mb-4 text-center"> 
-            <h3>Feature 2</h3>
-            <p>Description of feature 2.</p>
-          </div>
-          <div className="col-md-4 mb-4 text-center"> 
-            <h3>Feature 3</h3>
-            <p>Description of feature 3.</p>
-          </div>
-        </div>
+  <div className="container">
+    <h2 className="text-center mb-4">Key Features</h2>
+    <div className="d-flex justify-content-center align-items-center flex-column">
+      <div className="col-md-4 mb-4 text-center">
+        <h3>Stress Relief</h3>
+        <p>Our app offers a variety of stress-relief techniques, including guided meditations, breathing exercises, and mindfulness practices. Take a moment to relax and unwind, no matter where you are.</p>
+      </div>
+      <div className="col-md-4 mb-4 text-center">
+        <h3>Pressure Management</h3>
+        <p>Manage your work and personal pressures with ease using our app's intuitive tools and resources. From time-management techniques to stress-busting strategies, we've got you covered.</p>
+      </div>
+      <div className="col-md-4 mb-4 text-center">
+        <h3>Positive Self-Image</h3>
+        <p>Cultivate a positive self-image and boost your self-confidence with our app's empowering features. Practice self-care, affirmations, and goal-setting to foster a healthier relationship with yourself.</p>
       </div>
     </div>
-    <div className="testimonials-section py-5">
-      <div className="container ">
-        <h2 className="text-center ">What Our Users Say</h2>
-        <div className="row">
-          <div className="col-md-4 mt-4">
-            <div className="testimonial">
-              <p>Testimonial 1 from a satisfied user.</p>
-              <p>- User 1</p>
-            </div>
-          </div>
-          <div className="col-md-4 mt-4">
-            <div className="testimonial">
-              <p>Testimonial 2 from another satisfied user.</p>
-              <p>- User 2</p>
-            </div>
-          </div>
-          <div className="col-md-4 mt-4">
-            <div className="testimonial">
-              <p>Testimonial 3 from another happy user.</p>
-              <p>- User 3</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+  </div>
+</div>
 
+
+  <div className="testimonials-section py-5">
+  <div className="container">
+    <h2 className="text-center mb-4">What Our Users Say</h2>
+    <div className="row">
+      <div className="col-md-4 mt-4">
+        <div className="testimonial-box">
+          <div className="testimonial-content">
+            <p>Mind Walk has been an absolute game-changer for me. It's helped me manage my stress levels and stay focused on my goals. Highly recommend!</p>
+            <p>- Emily Smith</p>
+          </div>
+        </div>
+      </div>
+      <div className="col-md-4 mt-4">
+        <div className="testimonial-box">
+          <div className="testimonial-content">
+            <p>I never realized how much I needed Mind Walk until I started using it. It's like having a personal coach in my pocket, guiding me through life's challenges with ease.</p>
+            <p>- John Doe</p>
+          </div>
+        </div>
+      </div>
+      <div className="col-md-4 mt-4">
+        <div className="testimonial-box">
+          <div className="testimonial-content">
+            <p>Mind Walk has transformed my mindset and helped me cultivate a more positive outlook on life. I feel more confident and empowered than ever before. Thank you!</p>
+            <p>- Sarah Johnson</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
       {/* Footer Section */}
       <footer className="text-dark py-4 footer-custom">
