@@ -7,7 +7,9 @@ import 'swiper/css/navigation';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import '/Users/carternadain/Desktop/Mind-Walk/mind-walk/src/pages/style.css';
 import zenImage from '../images/zen.jpg';
-
+import cloudsImage from '../images/clouds.jpg';
+import rainbowImage from '../images/rainbow.jpg';
+import peaceImage from '../images/peace.jpg';
 const Home = () => {
  
 
@@ -87,7 +89,7 @@ const Home = () => {
       <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
       <SwiperSlide>
         <div className="feature text-center py-5">
-          <img src="path/to/stress_image.jpg" alt="Stress Relief"/>
+          <img src={peaceImage} alt="Stress Relief"/>
           <h2>Stress Relief</h2>
           <p>Explore guided meditations and breathing exercises to find inner calm and reduce stress.</p>
         </div>
@@ -95,7 +97,7 @@ const Home = () => {
       
       <SwiperSlide>
         <div className="feature text-center">
-          <img src="path/to/pressure_image.jpg" alt="Pressure Management"/>
+          <img src={cloudsImage} alt="Pressure Management"/>
           <h2>Pressure Management</h2>
           <p>Learn techniques to manage external pressures and maintain balance in your daily life.</p>
         </div>
@@ -103,7 +105,7 @@ const Home = () => {
       
       <SwiperSlide>
         <div className="feature text-center">
-          <img src="path/to/self_image_image.jpg" alt="Positive Self-Image"/>
+          <img src={rainbowImage} alt="Positive Self-Image"/>
           <h2>Positive Self-Image</h2>
           <p>Build a positive self-image through affirmations, self-reflection, and personal growth.</p>
         </div>
@@ -115,23 +117,63 @@ const Home = () => {
 
     <div className="features-section py-5">
   <div className="container">
-    <h2 className="text-center mb-4">Key Features</h2>
-    <div className="d-flex justify-content-center align-items-center flex-column">
-      <div className="col-md-4 mb-4 text-center">
-        <h3>Stress Relief</h3>
-        <p>Our app offers a variety of stress-relief techniques, including guided meditations, breathing exercises, and mindfulness practices. Take a moment to relax and unwind, no matter where you are.</p>
+    <h2 className="text-center mb-4 text-decoration-underline">Key Features</h2>
+    
+    {/* Stress Relief */}
+    <div className="row align-items-center">
+      {/* Left Side */}
+      <div className="col-md-6 text-center mb-4">
+        <div>
+          <img src={peaceImage} alt="Stress Image" className="img-fluid mb-3" />
+        </div>
       </div>
-      <div className="col-md-4 mb-4 text-center">
-        <h3>Pressure Management</h3>
-        <p>Manage your work and personal pressures with ease using our app's intuitive tools and resources. From time-management techniques to stress-busting strategies, we've got you covered.</p>
-      </div>
-      <div className="col-md-4 mb-4 text-center">
-        <h3>Positive Self-Image</h3>
-        <p>Cultivate a positive self-image and boost your self-confidence with our app's empowering features. Practice self-care, affirmations, and goal-setting to foster a healthier relationship with yourself.</p>
+      {/* Right Side */}
+      <div className="col-md-6 text-center mb-4">
+        <div>
+          <h3>Stress Relief</h3>
+          <p>Our app offers a variety of stress-relief techniques, including guided meditations, breathing exercises, and mindfulness practices. Take a moment to relax and unwind, no matter where you are.</p>
+        </div>
       </div>
     </div>
+
+    {/* Pressure Management */}
+    <div className="row align-items-center">
+      {/* Right Side */}
+      <div className="col-md-6 text-center mb-4">
+        <div>
+          <h3>Pressure Management</h3>
+          <p>Manage your work and personal pressures with ease using our app's intuitive tools and resources. From time-management techniques to stress-busting strategies, we've got you covered.</p>
+        </div>
+      </div>
+      {/* Left Side */}
+      <div className="col-md-6 text-center mb-4">
+        <div>
+          <img src={rainbowImage} alt="Pressure Image" className="img-fluid mb-3" />
+        </div>
+      </div>
+    </div>
+
+    {/* Positive Self-Image */}
+    <div className="row align-items-center">
+      {/* Left Side */}
+      <div className="col-md-6 text-center mb-4">
+        <div>
+          <img src={cloudsImage} alt="Self Image" className="img-fluid mb-3" />
+        </div>
+      </div>
+      {/* Right Side */}
+      <div className="col-md-6 text-center mb-4">
+        <div>
+          <h3>Positive Self-Image</h3>
+          <p>Cultivate a positive self-image and boost your self-confidence with our app's empowering features. Practice self-care, affirmations, and goal-setting to foster a healthier relationship with yourself.</p>
+        </div>
+      </div>
+    </div>
+
   </div>
 </div>
+
+
 
 
   <div className="testimonials-section py-5">
