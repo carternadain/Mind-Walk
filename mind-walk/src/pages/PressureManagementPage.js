@@ -4,42 +4,45 @@ import { Link } from 'react-router-dom';
 const PressureManagementPage = () => {
   return (
     <div>
-      {/* Navigation Bar */}
-      <nav className="navbar navbar-expand-lg navbar-light bg-">
-        <a className="navbar-brand" href="#">
-          Mind Walk
-        </a>
-        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav ml-auto">
-            {/* Navigation items */}
-            {/* Login */}
-            <li className="nav-item">
-              <a className="nav-link" href="#features">Login</a>
-            </li>
-            {/* Register */}
-            <li className="nav-item">
-              <a className="nav-link" href="#cta">Register</a>
-            </li>
-            {/* Dropdown */}
-            <li className="nav-item dropdown">
-              <a className="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Dropdown
-              </a>
-              {/* Dropdown menu */}
-              <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                <Link className="dropdown-item" to="/">Home</Link>
-                <Link className="dropdown-item" to="/stress-relief">Stress Relief</Link>
-                <Link className="dropdown-item" to="/pressure-management">Pressure Management</Link>
-                <Link className="dropdown-item" to="/positive-self-image">Positive Self-Image</Link>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </nav>
+    {/* Navigation Bar */}
+    <nav className="navbar navbar-expand-lg navbar-light bg-">
+      {/* Mind Walk logo/text on the left */}
+      <Link className="mindwalk-text navbar-brand" to="/">
+        Mind Walk
+      </Link>
+  
+      {/* Toggler button for mobile view */}
+      <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span className="navbar-toggler-icon"></span>
+      </button>
+  
+      {/* Links and form */}
+      <div className="collapse navbar-collapse" id="navbarNav">
+        <ul className="navbar-nav mx-auto">
+          {/* Links for stress relief, pressure management, and positive self-image */}
+          <li className="nav-item">
+            <Link className="nav-link text-centered" to="/stress-relief">Stress</Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link text-centered" to="/pressure-management">Pressure</Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link text-centered" to="/positive-self-image">Self-Image</Link>
+          </li>
+        </ul>
+  
+        {/* Login and Get Started buttons on the right */}
+        <ul className="navbar-nav ml-auto">
+          <li className="nav-item">
+            <Link className="nav-link" to="/login">Login</Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-link" to="/get-started">Get Started</Link>
+          </li>
+        </ul>
+      </div>
+    </nav>
 
       {/* Header with title "Pressure Management" centered */}
       <div className="container">
