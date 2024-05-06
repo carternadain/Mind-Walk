@@ -18,9 +18,9 @@ const Home = () => {
     {/* Navigation Bar */}
     <nav className="navbar navbar-expand-lg navbar-light bg-">
       {/* Mind Walk logo/text on the left */}
-      <a className="mindwalk-text navbar-brand" href="#">
+      <Link className="mindwalk-text navbar-brand" to="/">
         Mind Walk
-      </a>
+      </Link>
   
       {/* Toggler button for mobile view */}
       <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -33,27 +33,28 @@ const Home = () => {
         <ul className="navbar-nav mx-auto">
           {/* Links for stress relief, pressure management, and positive self-image */}
           <li className="nav-item">
-            <a className="nav-link" href="#stress-relief">Stress Relief</a>
+            <Link className="nav-link text-centered" to="/stress-relief">Stress</Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#pressure-management">Pressure Management</a>
+            <Link className="nav-link text-centered" to="/pressure-management">Pressure</Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#positive-self-image">Positive Self-Image</a>
+            <Link className="nav-link text-centered" to="/positive-self-image">Self-Image</Link>
           </li>
         </ul>
   
         {/* Login and Get Started buttons on the right */}
         <ul className="navbar-nav ml-auto">
           <li className="nav-item">
-            <a className="nav-link" href="#login">Login</a>
+            <Link className="nav-link" to="/login">Login</Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#get-started">Get Started</a>
+            <Link className="nav-link" to="/get-started">Get Started</Link>
           </li>
         </ul>
       </div>
     </nav>
+    
     <div className="hero-section">
   <div className="container">
     <div className="row align-items-center">
