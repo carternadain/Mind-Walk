@@ -68,7 +68,7 @@ const Home = () => {
       {/* Right Side */}
       <div className="col-md-6">
         <div className="blank-square">
-        <img src={zenImage} alt="Zen" className="img-fluid" />
+        <img src={zenImage} alt="Zen" className="img-fluid rounded" />
         </div>
       </div>
     </div>
@@ -125,7 +125,7 @@ const Home = () => {
       {/* Left Side */}
       <div className="col-md-6 text-center mb-4">
         <div>
-          <img src={peaceImage} alt="Stress Image" className="img-fluid mb-3" />
+          <img src={peaceImage} alt="Stress Image" className="img-fluid mb-3 rounded" />
         </div>
       </div>
       {/* Right Side */}
@@ -149,7 +149,7 @@ const Home = () => {
       {/* Left Side */}
       <div className="col-md-6 text-center mb-4">
         <div>
-          <img src={rainbowImage} alt="Pressure Image" className="img-fluid mb-3" />
+          <img src={rainbowImage} alt="Pressure Image" className="img-fluid mb-3 rounded" />
         </div>
       </div>
     </div>
@@ -159,7 +159,7 @@ const Home = () => {
       {/* Left Side */}
       <div className="col-md-6 text-center mb-4">
         <div>
-          <img src={cloudsImage} alt="Self Image" className="img-fluid mb-3" />
+          <img src={cloudsImage} alt="Self Image" className="img-fluid mb-3 rounded" />
         </div>
       </div>
       {/* Right Side */}
