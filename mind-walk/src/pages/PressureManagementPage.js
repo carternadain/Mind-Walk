@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Card, Button } from 'react-bootstrap';
 import pastalimage from '../images/pastal.jpg';
-const StressReliefPage = () => {
+const PressureManagementpage = () => {
   return (
     <div>
       {/* Navigation Bar */}
@@ -157,5 +157,5 @@ const StressReliefPage = () => {
   );
 };
 
-export default StressReliefPage;
+export default PressureManagementpage;
 

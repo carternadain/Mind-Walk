@@ -1,127 +1,126 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Card, Button } from 'react-bootstrap';
+// import selfImage from '../images/self-image.jpg'; // Change the image source
 
-const PositiveSelfImagePage = () => {
+const postiveSelfImage = () => {
   return (
     <div>
-    {/* Navigation Bar */}
-    <nav className="navbar navbar-expand-lg navbar-light bg-">
-      {/* Mind Walk logo/text on the left */}
-      <Link className="mindwalk-text navbar-brand" to="/">
-        Mind Walk
-      </Link>
-  
-      {/* Toggler button for mobile view */}
-      <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span className="navbar-toggler-icon"></span>
-      </button>
-  
-      {/* Links and form */}
-      <div className="collapse navbar-collapse" id="navbarNav">
-        <ul className="navbar-nav mx-auto">
-          {/* Links for stress relief, pressure management, and positive self-image */}
-          <li className="nav-item">
-            <Link className="nav-link text-centered" to="/stress-relief">Stress</Link>
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link text-centered" to="/pressure-management">Pressure</Link>
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link text-centered" to="/positive-self-image">Self-Image</Link>
-          </li>
-        </ul>
-  
-        {/* Login and Get Started buttons on the right */}
-        <ul className="navbar-nav ml-auto">
-          <li className="nav-item">
-            <Link className="nav-link" to="/login">Login</Link>
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link" to="/get-started">Get Started</Link>
-          </li>
-        </ul>
-      </div>
-    </nav>
-
-      {/* Header with title "Pressure Management" centered */}
-      <div className="container">
-        <div className="row">
-          <div className="col">
-            <h2 className="text-center">How To Maintain A Positive Self Image </h2>
-          </div>
+      {/* Navigation Bar */}
+      <nav className="navbar navbar-expand-lg navbar-light bg-">
+        {/* Mind Walk logo/text on the left */}
+        <Link className="mindwalk-text navbar-brand" to="/">
+          Mind Walk
+        </Link>
+    
+        {/* Toggler button for mobile view */}
+        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span className="navbar-toggler-icon"></span>
+        </button>
+    
+        {/* Links and form */}
+        <div className="collapse navbar-collapse" id="navbarNav">
+          <ul className="navbar-nav mx-auto">
+            {/* Links for stress relief, pressure management, and positive self-image */}
+            <li className="nav-item">
+              <Link className="nav-link text-centered" to="/stress-relief">Stress</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link text-centered" to="/pressure-management">Pressure</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link text-centered" to="/self-image-improvement">Self-Image</Link>
+            </li>
+          </ul>
+    
+          {/* Login and Get Started buttons on the right */}
+          <ul className="navbar-nav ml-auto">
+            <li className="nav-item">
+              <Link className="nav-link" to="/login">Login</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/get-started">Get Started</Link>
+            </li>
+          </ul>
         </div>
+      </nav>
 
-        {/* Existing paragraph */}
-        <div className="row">
-          <div className="col">
-            <p className="text-center">To effectively manage pressure, it's essential to first acknowledge and accept the existence of stressors. Next, prioritize tasks based on urgency and importance, breaking them down into smaller, manageable steps. Setting realistic goals and deadlines can help alleviate the feeling of being overwhelmed. Additionally, practicing mindfulness techniques, such as deep breathing or meditation, can provide a sense of calm and clarity in challenging situations. Seeking support from peers or mentors and maintaining open communication about difficulties can also lighten the burden of pressure. Finally, remember to take breaks, engage in activities you enjoy, and prioritize self-care to maintain overall well-being during times of pressure.</p>
-          </div>
-        </div>
-      </div>
-
-      {/* Cards Section */}
-      <div className="container">
-        <div className="row">
-          {/* Guided Meditation and Breathing Exercises Card */}
-          <div className="col-sm-4">
-            <div className="card">
-              <div className="card-body">
-                <h5 className="card-title">Positive Affirmations</h5>
-                <p className="card-text"> Incorporating positive affirmations into daily routines can help reframe negative self-perceptions and boost self-confidence..</p>
-                {/* You can add an image here */}
+      {/* Main Content */}
+      <div className="container mt-4">
+        <div className="row align-items-center">
+          <div className="col-md-6">
+            <img src='' alt="Self-Image Improvement" className="img-fluid rounded mb-4" />
+            <div className="border border-secondary rounded p-4">
+              <div className="text-center">
+                <h3>Understanding Self-Image</h3>
+                <p>Your self-image is how you perceive yourself, including your thoughts, beliefs, and feelings about your appearance, abilities, and worth. It influences your behavior, interactions with others, and overall quality of life. Developing a positive self-image involves challenging negative thoughts, practicing self-compassion, and embracing your uniqueness.</p>
               </div>
             </div>
           </div>
-
-          {/* Goal Setting and Tracking Card */}
-          <div className="col-sm-4">
-            <div className="card">
-              <div className="card-body">
-                <h5 className="card-title">Self-Compassion Practices</h5>
-                <p className="card-text"> Cultivating self-compassion involves treating oneself with kindness and understanding, which can counteract self-criticism and foster a more positive self-image.</p>
-                {/* You can add an image here */}
-              </div>
-            </div>
-          </div>
-
-          {/* Stress Assessment Tools Card */}
-          <div className="col-sm-4">
-            <div className="card">
-              <div className="card-body">
-                <h5 className="card-title">Gratitude Journaling</h5>
-                <p className="card-text">Keeping a gratitude journal and regularly reflecting on positive aspects of oneself and one's life can promote self-acceptance and appreciation.</p>
-                {/* You can add an image here */}
+          <div className="col-md-6">
+            <div className="container p-4">
+              <div className="text-center">
+                <h3>Enhance Your Self-Image</h3>
+                <p>Improving your self-image is essential for overall well-being and confidence. Here are some signs that you may need to enhance your self-image:</p>
+                <ul className="text-left">
+                  <li>Low self-esteem or self-worth</li>
+                  <li>Negative self-talk or self-criticism</li>
+                  <li>Comparing yourself unfavorably to others</li>
+                  <li>Avoidance of social situations due to insecurity</li>
+                </ul>
+                <p>Investing in your self-image can lead to greater happiness and success.</p>
+                <Button variant="primary">Learn More</Button>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
-      {/* Additional Paragraphs */}
-      <div className="container">
-        {/* First Additional Paragraph */}
+        <h2 className="text-center mt-4 mb-4">Ways To Improve Self-Image</h2>
+
         <div className="row">
-          <div className="col">
-            <h4>Positive Affirmations Information</h4>
-            <p>Positive affirmations are statements designed to challenge and overcome negative self-beliefs. By repeating affirmations such as "I am worthy" or "I am capable," individuals can gradually rewire their thought patterns and build a more positive self-image. Affirmations serve as reminders of one's inherent worth and potential, helping to counteract the impact of self-doubt and criticism. Over time, consistent use of positive affirmations can lead to increased self-confidence, resilience, and a greater sense of self-worth.</p>
+          <div className="col-md-4 mb-4">
+            <Card>
+              <Card.Body>
+                <Card.Title>Self-Reflection</Card.Title>
+                <Card.Text>
+                  Engage in self-reflection to identify and challenge negative beliefs about yourself.
+                </Card.Text>
+                <Link to="/self-reflection" className="btn btn-primary">Learn More</Link>
+              </Card.Body>
+            </Card>
+          </div>
+
+          <div className="col-md-4 mb-4">
+            <Card>
+              <Card.Body>
+                <Card.Title>Positive Affirmations</Card.Title>
+                <Card.Text>
+                  Practice positive affirmations to cultivate self-love and acceptance.
+                </Card.Text>
+                <Link to="/positive-affirmations" className="btn btn-primary">Explore</Link>
+              </Card.Body>
+            </Card>
+          </div>
+
+          <div className="col-md-4 mb-4">
+            <Card>
+              <Card.Body>
+                <Card.Title>Seek Support</Card.Title>
+                <Card.Text>
+                  Reach out to friends, family, or a therapist for encouragement and guidance.
+                </Card.Text>
+                <Link to="/seek-support" className="btn btn-primary">Discover</Link>
+              </Card.Body>
+            </Card>
           </div>
         </div>
 
-        {/* Second Additional Paragraph */}
-        <div className="row">
-          <div className="col">
-          <h4>Self-Compassion Information</h4>
-            <p>Self-compassion involves treating oneself with the same kindness, care, and understanding as one would offer to a friend in times of need. This practice acknowledges that imperfection and struggle are part of the human experience, fostering a sense of common humanity. By practicing self-compassion, individuals can soothe their inner critic, cultivate self-acceptance, and develop a more balanced perspective on their strengths and weaknesses. Research has shown that self-compassionate individuals are better able to cope with setbacks, experience less anxiety and depression, and have a more positive self-image overall.</p>
-          </div>
-        </div>
-
-        {/* Third Additional Paragraph */}
-        <div className="row">
-          <div className="col">
-          <h4>Gratitude journaling Information</h4>
-            <p>Gratitude journaling involves regularly writing down things for which one is grateful, whether big or small. By focusing on the positive aspects of life, including personal qualities, achievements, and experiences, individuals can shift their attention away from perceived flaws and shortcomings. Gratitude journaling promotes self-reflection and self-appreciation, highlighting the abundance and richness of one's life. Over time, this practice can lead to a greater sense of self-worth, increased optimism, and a more positive outlook on oneself and the world.</p>
-          </div>
+        {/* Additional Resources Section */}
+        <div className="text-center mt-5">
+          <h3>Explore More Resources</h3>
+          <p>Discover additional tools and resources to help you enhance your self-image and embrace your true self.</p>
+          <Button variant="outline-primary">View All Resources</Button>
         </div>
       </div>
 
@@ -141,13 +140,10 @@ const PositiveSelfImagePage = () => {
 
             {/* Right side with social media icons */}
             <div className="col-md-6 text-right">
-            
-            <i class="mx-2 bi bi-arrow-clockwise"></i>
-            <i class="mx-2 bi bi-camera"></i>
-            <i class="mx-2 bi bi-chat-dots"></i>
-            <i class="mx-2 bi bi-cart2"></i>
-             
-        
+              <i className="mx-2 bi bi-arrow-clockwise"></i>
+              <i className="mx-2 bi bi-camera"></i>
+              <i className="mx-2 bi bi-chat-dots"></i>
+              <i className="mx-2 bi bi-cart2"></i>
             </div>
           </div>
         </div>
@@ -156,5 +152,4 @@ const PositiveSelfImagePage = () => {
   );
 };
 
-
-export default PositiveSelfImagePage;
+export default postiveSelfImage;
