@@ -10,6 +10,10 @@ import zenImage from '../images/zen.jpg';
 import cloudsImage from '../images/clouds.jpg';
 import rainbowImage from '../images/rainbow.jpg';
 import peaceImage from '../images/peace.jpg';
+import highsky from '../images/highsky.JPG';  
+import palmtree from '../images/palmtree.JPG'; 
+import clouds2 from '../images/clouds2.JPG'; 
+
 const Home = () => {
  
 
@@ -90,25 +94,27 @@ const Home = () => {
       <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
       <SwiperSlide>
         <div className="feature text-center py-5">
-          <img src={peaceImage} alt="Stress Relief"/>
-          <h2>Stress Relief</h2>
+        <h2>Stress Relief</h2>
           <p>Explore guided meditations and breathing exercises to find inner calm and reduce stress.</p>
+          <img src={palmtree} alt="Stress Relief"/>
         </div>
       </SwiperSlide>
       
       <SwiperSlide>
         <div className="feature text-center">
-          <img src={cloudsImage} alt="Pressure Management"/>
-          <h2>Pressure Management</h2>
+        <h2>Pressure Management</h2>
           <p>Learn techniques to manage external pressures and maintain balance in your daily life.</p>
+          <img src={highsky} alt="Pressure Management"/>
+         
         </div>
       </SwiperSlide>
       
       <SwiperSlide>
-        <div className="feature text-center">
-          <img src={rainbowImage} alt="Positive Self-Image"/>
-          <h2>Positive Self-Image</h2>
+        <div className="feature text-center"> 
+        <h2>Positive Self-Image</h2>
           <p>Build a positive self-image through affirmations, self-reflection, and personal growth.</p>
+          <img src={clouds2} alt="Positive Self-Image"/>
+        
         </div>
       </SwiperSlide>
       
@@ -238,4 +244,3 @@ const Home = () => {
 };
 
 export default Home;
-

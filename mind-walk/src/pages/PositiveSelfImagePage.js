@@ -1,28 +1,22 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Card, Button } from 'react-bootstrap';
-// import selfImage from '../images/self-image.jpg'; // Change the image source
+import mountain from '../images/mountain.jpg'; // Change the image source
 
-const postiveSelfImage = () => {
+const PostiveSelfImage = () => {
   return (
     <div>
       {/* Navigation Bar */}
       <nav className="navbar navbar-expand-lg navbar-light bg-">
-        {/* Mind Walk logo/text on the left */}
         <Link className="mindwalk-text navbar-brand" to="/">
           Mind Walk
         </Link>
-    
-        {/* Toggler button for mobile view */}
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
-    
-        {/* Links and form */}
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav mx-auto">
-            {/* Links for stress relief, pressure management, and positive self-image */}
             <li className="nav-item">
               <Link className="nav-link text-centered" to="/stress-relief">Stress</Link>
             </li>
@@ -33,8 +27,6 @@ const postiveSelfImage = () => {
               <Link className="nav-link text-centered" to="/self-image-improvement">Self-Image</Link>
             </li>
           </ul>
-    
-          {/* Login and Get Started buttons on the right */}
           <ul className="navbar-nav ml-auto">
             <li className="nav-item">
               <Link className="nav-link" to="/login">Login</Link>
@@ -48,14 +40,12 @@ const postiveSelfImage = () => {
 
       {/* Main Content */}
       <div className="container mt-4">
-        <div className="row align-items-center">
+        <div className="row justify-content-center"> {/* Center the column */}
           <div className="col-md-6">
-            <img src='' alt="Self-Image Improvement" className="img-fluid rounded mb-4" />
-            <div className="border border-secondary rounded p-4">
-              <div className="text-center">
-                <h3>Understanding Self-Image</h3>
-                <p>Your self-image is how you perceive yourself, including your thoughts, beliefs, and feelings about your appearance, abilities, and worth. It influences your behavior, interactions with others, and overall quality of life. Developing a positive self-image involves challenging negative thoughts, practicing self-compassion, and embracing your uniqueness.</p>
-              </div>
+            <img src={mountain} alt="Self-Image Improvement" className="img-fluid rounded mb-4" />
+            <div className="border border-secondary rounded p-4 text-center"> {/* Center the text */}
+              <h3>Understanding Self-Image</h3>
+              <p>Your self-image is how you perceive yourself, including your thoughts, beliefs, and feelings about your appearance, abilities, and worth. It influences your behavior, interactions with others, and overall quality of life. Developing a positive self-image involves challenging negative thoughts, practicing self-compassion, and embracing your uniqueness.</p>
             </div>
           </div>
           <div className="col-md-6">
@@ -116,7 +106,6 @@ const postiveSelfImage = () => {
           </div>
         </div>
 
-        {/* Additional Resources Section */}
         <div className="text-center mt-5">
           <h3>Explore More Resources</h3>
           <p>Discover additional tools and resources to help you enhance your self-image and embrace your true self.</p>
@@ -124,11 +113,9 @@ const postiveSelfImage = () => {
         </div>
       </div>
 
-      {/* Footer Section */}
       <footer className="text-dark py-4">
         <div className="container">
           <div className="row">
-            {/* Left side with unordered list */}
             <div className="col-md-6">
               <ul className="list-unstyled">
                 <li><a href="#" className="text-dark mx-2">Help and support</a></li>
@@ -137,8 +124,6 @@ const postiveSelfImage = () => {
                 <li><a href="#" className="text-dark mx-2">Contact</a></li>
               </ul>
             </div>
-
-            {/* Right side with social media icons */}
             <div className="col-md-6 text-right">
               <i className="mx-2 bi bi-arrow-clockwise"></i>
               <i className="mx-2 bi bi-camera"></i>
@@ -152,4 +137,4 @@ const postiveSelfImage = () => {
   );
 };
 
-export default postiveSelfImage;
+export default PostiveSelfImage;
