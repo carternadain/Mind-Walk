@@ -4,7 +4,8 @@ import Home from './pages/Home';
 import StressReliefPage from './pages/StressReliefPage';
 import PressureManagementPage from './pages/PressureManagementPage';
 import PositiveSelfImagePage from './pages/PositiveSelfImagePage';
-
+import Login from './pages/login';
+import GetStarted from './pages/getstarted';
 
 function App() {
   return (
@@ -15,6 +16,8 @@ function App() {
           <Route path="/stress-relief" element={<StressReliefPage/>} />
           <Route path="/pressure-management" element={<PressureManagementPage/>} />
           <Route path='/positive-self-image' element={<PositiveSelfImagePage/>} />
+          <Route path='/login' element={<Login/>} />
+          <Route path='/get-started' element={<GetStarted/>} />
         </Routes>
        
     </Router>
