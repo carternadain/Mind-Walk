@@ -1,5 +1,5 @@
 import React from "react";
-import { NavigationBar } from "../Navigation";
+import { NavigationBar } from "../NavigationBar";
 
 export function MainLayout({ children }) {
  return (

@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Card, Button } from 'react-bootstrap';
 import pastelcloud from '../images/pastelcloud.JPG';
-import { MainLayout } from "../components/layouts/MainLayout";
+import { MainLayout } from "../components/MainLayout";
 
 const PressureManagementPage = () => {
   return (

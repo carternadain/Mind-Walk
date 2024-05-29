@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Card, Button, Modal, Form } from 'react-bootstrap';
 import snowrock from '../images/snowrock.JPG';
-import { MainLayout } from "../components/layouts/MainLayout";
+import { MainLayout } from "../components/MainLayout";
 
 const StressReliefPage = () => {
   const [showModal, setShowModal] = useState({});

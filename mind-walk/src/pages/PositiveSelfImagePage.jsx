@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Card, Button, Modal } from 'react-bootstrap';
 import mountain from '../images/mountain.jpg';
-import { MainLayout } from "../components/layouts/MainLayout";
+import { MainLayout } from "../components/MainLayout";
 
 const PositiveSelfImagePage = () => {
   const [showModal, setShowModal] = useState({});
