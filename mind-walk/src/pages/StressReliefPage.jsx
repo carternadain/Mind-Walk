@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Card, Button, Modal, Form } from 'react-bootstrap';
-import snowrock from '/Users/carternadain/Desktop/Mind-Walk/mind-walk/src/images/snowrock.JPG';
+import snowrock from '../images/snowrock.JPG';
+import { MainLayout } from "../components/layouts/MainLayout";
+
 
 const StressReliefPage = () => {
   const [showModal, setShowModal] = useState({});
@@ -26,39 +28,7 @@ const StressReliefPage = () => {
   };
 
   return (
-    <div>
-      {/* Navigation Bar */}
-      <nav className="navbar navbar-expand-lg navbar-light bg-">
-        <Link className="mindwalk-text navbar-brand" to="/">
-          Mind Walk
-        </Link>
-        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav mx-auto">
-            <li className="nav-item">
-              <Link className="nav-link text-centered" to="/stress-relief">Stress</Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link text-centered" to="/pressure-management">Pressure</Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link text-centered" to="/positive-self-image">Self-Image</Link>
-            </li>
-          </ul>
-          <ul className="navbar-nav ml-auto">
-            <li className="nav-item">
-              <Link className="nav-link" to="/login">Login</Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/get-started">Get Started</Link>
-            </li>
-          </ul>
-        </div>
-      </nav>
-      
+    <MainLayout>
       <div className="container mt-4">
         <div className="container p-4 mb-4">
           <div className="row align-items-center">
@@ -81,7 +51,7 @@ const StressReliefPage = () => {
             </div>
           </div>
         </div>
-        
+
         <div className="border border-secondary rounded p-4">
           <div className="text-center">
             <h3>What Is Stress?</h3>
@@ -233,29 +203,7 @@ const StressReliefPage = () => {
           <Button variant="secondary" onClick={() => handleClose('resources')}>Close</Button>
         </Modal.Footer>
       </Modal>
-
-      {/* Footer Section */}
-      <footer className="text-dark py-4">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-6">
-              <ul className="list-unstyled">
-                <li><a href="#" className="text-dark mx-2">Help and support</a></li>
-                <li><a href="#" className="text-dark mx-2">About us</a></li>
-                <li><a href="#" className="text-dark mx-2">Accessibility statement</a></li>
-                <li><a href="#" className="text-dark mx-2">Contact</a></li>
-              </ul>
-            </div>
-            <div className="col-md-6 text-right">
-              <i className="mx-2 bi bi-arrow-clockwise"></i>
-              <i className="mx-2 bi bi-camera"></i>
-              <i className="mx-2 bi bi-chat-dots"></i>
-              <i className="mx-2 bi bi-cart2"></i>
-            </div>
-          </div>
-        </div>
-      </footer>
-    </div>
+    </MainLayout>
   );
 };
 

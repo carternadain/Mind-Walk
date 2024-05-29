@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import { Card, Button, Modal } from 'react-bootstrap';
 import mountain from '../images/mountain.jpg';
+import { MainLayout } from "../components/layouts/MainLayout";
 
-const PositiveSelfImage = () => {
+const PositiveSelfImagePage = () => {
   const [showModal, setShowModal] = useState({});
 
   const handleShow = (modal) => {
@@ -15,39 +15,7 @@ const PositiveSelfImage = () => {
   };
 
   return (
-    <div>
-      {/* Navigation Bar */}
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <Link className="mindwalk-text navbar-brand" to="/">
-          Mind Walk
-        </Link>
-        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav mx-auto">
-            <li className="nav-item">
-              <Link className="nav-link text-centered" to="/stress-relief">Stress</Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link text-centered" to="/pressure-management">Pressure</Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link text-centered" to="/self-image-improvement">Self-Image</Link>
-            </li>
-          </ul>
-          <ul className="navbar-nav ml-auto">
-            <li className="nav-item">
-              <Link className="nav-link" to="/login">Login</Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/get-started">Get Started</Link>
-            </li>
-          </ul>
-        </div>
-      </nav>
-
+    <MainLayout>
       {/* Main Content */}
       <div className="container mt-4">
         <div className="row justify-content-center">
@@ -185,30 +153,9 @@ const PositiveSelfImage = () => {
           <Button variant="secondary" onClick={() => handleClose('seekSupport')}>Close</Button>
         </Modal.Footer>
       </Modal>
-
-      <footer className="text-dark py-4">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-6">
-              <ul className="list-unstyled">
-                <li><a href="#" className="text-dark mx-2">Help and support</a></li>
-                <li><a href="#" className="text-dark mx-2">About us</a></li>
-                <li><a href="#" className="text-dark mx-2">Accessibility statement</a></li>
-                <li><a href="#" className="text-dark mx-2">Contact</a></li>
-              </ul>
-            </div>
-            <div className="col-md-6 text-right">
-              <i className="mx-2 bi bi-arrow-clockwise"></i>
-              <i className="mx-2 bi bi-camera"></i>
-              <i className="mx-2 bi bi-chat-dots"></i>
-              <i className="mx-2 bi bi-cart2"></i>
-            </div>
-          </div>
-        </div>
-      </footer>
-    </div>
+    </MainLayout>
   );
 };
 
-export default PositiveSelfImage;
+export default PositiveSelfImagePage;
 
