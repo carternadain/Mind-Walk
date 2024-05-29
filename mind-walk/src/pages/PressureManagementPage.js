@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Card, Button } from 'react-bootstrap';
-import pastalimage from '../images/pastal.jpg';
+import pastelcloud from '/Users/carternadain/Desktop/Mind-Walk/mind-walk/src/images/pastelcloud.JPG';
 const PressureManagementpage = () => {
   return (
     <div>
@@ -49,7 +49,7 @@ const PressureManagementpage = () => {
       <div className="container p-4 mb-4">
   <div className="row align-items-center">
     <div className="col-md-6">
-      <img src={pastalimage}alt="Stress Icon" className="img-fluid rounded" />
+      <img src={pastelcloud}alt="Stress Icon" className="img-fluid rounded" />
     </div>
     <div className="col-md-6">
       <div className="text-center">
