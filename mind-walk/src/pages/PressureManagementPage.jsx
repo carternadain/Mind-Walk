@@ -11,7 +11,7 @@ const PressureManagementPage = () => {
           <div className="container p-4 mb-4">
             <div className="row align-items-center">
               <div className="col-md-6">
-                <img src={pastelcloud}alt="Stress Icon" className="img-fluid rounded" />
+                <img src={pastelcloud} alt="Stress Icon" className="img-fluid rounded" />
               </div>
               <div className="col-md-6">
                 <div className="text-center">
