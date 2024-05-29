@@ -1,13 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Card, Button } from 'react-bootstrap';
-import mountain from '../images/mountain.jpg'; // Change the image source
+import { Card, Button, Modal } from 'react-bootstrap';
+import mountain from '../images/mountain.jpg';
 
-const PostiveSelfImage = () => {
+const PositiveSelfImage = () => {
+  const [showModal, setShowModal] = useState({});
+
+  const handleShow = (modal) => {
+    setShowModal((prev) => ({ ...prev, [modal]: true }));
+  };
+
+  const handleClose = (modal) => {
+    setShowModal((prev) => ({ ...prev, [modal]: false }));
+  };
+
   return (
     <div>
       {/* Navigation Bar */}
-      <nav className="navbar navbar-expand-lg navbar-light bg-">
+      <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <Link className="mindwalk-text navbar-brand" to="/">
           Mind Walk
         </Link>
@@ -40,10 +50,10 @@ const PostiveSelfImage = () => {
 
       {/* Main Content */}
       <div className="container mt-4">
-        <div className="row justify-content-center"> {/* Center the column */}
+        <div className="row justify-content-center">
           <div className="col-md-6">
             <img src={mountain} alt="Self-Image Improvement" className="img-fluid rounded mb-4" />
-            <div className="border border-secondary rounded p-4 text-center"> {/* Center the text */}
+            <div className="border border-secondary rounded p-4 text-center">
               <h3>Understanding Self-Image</h3>
               <p>Your self-image is how you perceive yourself, including your thoughts, beliefs, and feelings about your appearance, abilities, and worth. It influences your behavior, interactions with others, and overall quality of life. Developing a positive self-image involves challenging negative thoughts, practicing self-compassion, and embracing your uniqueness.</p>
             </div>
@@ -76,7 +86,7 @@ const PostiveSelfImage = () => {
                 <Card.Text>
                   Engage in self-reflection to identify and challenge negative beliefs about yourself.
                 </Card.Text>
-                <Link to="/self-reflection" className="btn btn-primary">Learn More</Link>
+                <Button variant="primary" onClick={() => handleShow('selfReflection')}>Learn More</Button>
               </Card.Body>
             </Card>
           </div>
@@ -88,7 +98,7 @@ const PostiveSelfImage = () => {
                 <Card.Text>
                   Practice positive affirmations to cultivate self-love and acceptance.
                 </Card.Text>
-                <Link to="/positive-affirmations" className="btn btn-primary">Explore</Link>
+                <Button variant="primary" onClick={() => handleShow('positiveAffirmations')}>Explore</Button>
               </Card.Body>
             </Card>
           </div>
@@ -100,7 +110,7 @@ const PostiveSelfImage = () => {
                 <Card.Text>
                   Reach out to friends, family, or a therapist for encouragement and guidance.
                 </Card.Text>
-                <Link to="/seek-support" className="btn btn-primary">Discover</Link>
+                <Button variant="primary" onClick={() => handleShow('seekSupport')}>Discover</Button>
               </Card.Body>
             </Card>
           </div>
@@ -112,6 +122,69 @@ const PostiveSelfImage = () => {
           <Button variant="outline-primary">View All Resources</Button>
         </div>
       </div>
+
+      {/* Modals */}
+      <Modal show={showModal.selfReflection} onHide={() => handleClose('selfReflection')}>
+        <Modal.Header closeButton>
+          <Modal.Title>Self-Reflection</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <p>Engage in self-reflection to identify and challenge negative beliefs about yourself.</p>
+          <p>Here are some exercises you can try:</p>
+          <ul>
+            <li>Write down negative thoughts and challenge them with positive alternatives.</li>
+            <li>Keep a daily journal to reflect on your achievements and strengths.</li>
+            <li>Practice mindfulness meditation to become more aware of your thoughts and feelings.</li>
+          </ul>
+          <form>
+            <div className="form-group">
+              <label htmlFor="reflection">Write your reflection:</label>
+              <textarea className="form-control" id="reflection" rows="3"></textarea>
+            </div>
+            <Button variant="primary" type="submit">Submit</Button>
+          </form>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={() => handleClose('selfReflection')}>Close</Button>
+        </Modal.Footer>
+      </Modal>
+
+      <Modal show={showModal.positiveAffirmations} onHide={() => handleClose('positiveAffirmations')}>
+        <Modal.Header closeButton>
+          <Modal.Title>Positive Affirmations</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <p>Practice positive affirmations to cultivate self-love and acceptance.</p>
+          <p>Here are some affirmations you can use:</p>
+          <ul>
+            <li>I am worthy of love and respect.</li>
+            <li>I am strong and capable.</li>
+            <li>I believe in myself and my abilities.</li>
+          </ul>
+          <p>Try saying these affirmations daily in front of a mirror.</p>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={() => handleClose('positiveAffirmations')}>Close</Button>
+        </Modal.Footer>
+      </Modal>
+
+      <Modal show={showModal.seekSupport} onHide={() => handleClose('seekSupport')}>
+        <Modal.Header closeButton>
+          <Modal.Title>Seek Support</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <p>Reach out to friends, family, or a therapist for encouragement and guidance.</p>
+          <p>Here are some steps you can take:</p>
+          <ul>
+            <li>Talk to a trusted friend or family member about your feelings.</li>
+            <li>Join a support group or community.</li>
+            <li>Schedule an appointment with a therapist or counselor.</li>
+          </ul>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={() => handleClose('seekSupport')}>Close</Button>
+        </Modal.Footer>
+      </Modal>
 
       <footer className="text-dark py-4">
         <div className="container">
@@ -137,4 +210,5 @@ const PostiveSelfImage = () => {
   );
 };
 
-export default PostiveSelfImage;
+export default PositiveSelfImage;
+
