@@ -5,6 +5,7 @@ export function MainLayout({ children }) {
  return (
      <div>
          <NavigationBar />
+
          <section>{children}</section>
 
          <footer className="text-dark py-4">

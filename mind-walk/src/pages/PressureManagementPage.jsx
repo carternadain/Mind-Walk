@@ -4,7 +4,6 @@ import { Card, Button } from 'react-bootstrap';
 import pastelcloud from '../images/pastelcloud.JPG';
 import { MainLayout } from "../components/layouts/MainLayout";
 
-
 const PressureManagementPage = () => {
   return (
       <MainLayout>

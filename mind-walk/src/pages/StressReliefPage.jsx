@@ -4,7 +4,6 @@ import { Card, Button, Modal, Form } from 'react-bootstrap';
 import snowrock from '../images/snowrock.JPG';
 import { MainLayout } from "../components/layouts/MainLayout";
 
-
 const StressReliefPage = () => {
   const [showModal, setShowModal] = useState({});
   const [formData, setFormData] = useState({ stressLevel: '', journalEntry: '' });
