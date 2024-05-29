@@ -4,14 +4,14 @@ import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import '/Users/carternadain/Desktop/Mind-Walk/mind-walk/src/pages/style.css';
+import './style.css'
 import zenImage from '../images/zen.jpg';
 import cloudsImage from '../images/clouds.jpg';
 import rainbowImage from '../images/rainbow.jpg';
 import peaceImage from '../images/peace.jpg';
-import highsky from '../images/highsky.JPG';  
-import palmtree from '../images/palmtree.JPG'; 
-import clouds2 from '../images/clouds2.JPG'; 
+import highsky from '../images/highsky.JPG';
+import palmtree from '../images/palmtree.JPG';
+import clouds2 from '../images/clouds2.JPG';
 
 const Home = () => {
   const token = localStorage.getItem('token');
@@ -30,13 +30,13 @@ const Home = () => {
         <Link className="mindwalk-text navbar-brand" to="/">
           Mind Walk
         </Link>
-    
+
         {/* Toggler button for mobile view */}
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
-    
+
         {/* Links and form */}
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav mx-auto">
@@ -51,7 +51,7 @@ const Home = () => {
               <Link className="nav-link text-centered" to="/positive-self-image">Self-Image</Link>
             </li>
           </ul>
-    
+
           {/* Login, Get Started or Logout button on the right */}
           <ul className="navbar-nav ml-auto">
             {token ? (
@@ -71,7 +71,7 @@ const Home = () => {
           </ul>
         </div>
       </nav>
-      
+
       <div className="hero-section">
         <div className="container">
           <div className="row align-items-center">
@@ -81,7 +81,7 @@ const Home = () => {
               <p>Mind Walk is your personal guide to conquering obstacles, nurturing your well-being, and unlocking your true potential. Embark on a transformative journey towards a happier and more fulfilling life.</p>
               <button className="btn btn-primary">Get Started</button>
             </div>
-    
+
             {/* Right Side */}
             <div className="col-md-6">
               <div className="blank-square">
@@ -91,7 +91,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-    
+
       <div className="feature-section py-5">
         <div className="container">
           <div className="row">
@@ -103,7 +103,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      
+
       <section>
         <Swiper navigation={true} modules={[Navigation]} className="mySwiper">
           <SwiperSlide>
@@ -113,7 +113,7 @@ const Home = () => {
               <img src={palmtree} alt="tree"/>
             </div>
           </SwiperSlide>
-          
+
           <SwiperSlide>
             <div className="feature text-center">
               <h2>Pressure Management</h2>
@@ -121,23 +121,23 @@ const Home = () => {
               <img src={highsky} alt="sky"/>
             </div>
           </SwiperSlide>
-          
+
           <SwiperSlide>
-            <div className="feature text-center"> 
+            <div className="feature text-center">
               <h2>Positive Self-Image</h2>
               <p>Build a positive self-image through affirmations, self-reflection, and personal growth.</p>
               <img src={clouds2} alt="clouds"/>
             </div>
           </SwiperSlide>
-          
+
           {/* Add more SwiperSlides for additional content if needed */}
         </Swiper>
       </section>
-  
+
       <div className="features-section py-5">
         <div className="container">
           <h2 className="text-center mb-4 text-decoration-underline">Key Features</h2>
-          
+
           {/* Stress Relief */}
           <div className="row align-items-center">
             {/* Left Side */}
@@ -154,7 +154,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-  
+
           {/* Pressure Management */}
           <div className="row align-items-center">
             {/* Right Side */}
@@ -171,7 +171,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-  
+
           {/* Positive Self-Image */}
           <div className="row align-items-center">
             {/* Left Side */}
@@ -190,7 +190,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-  
+
       <div className="testimonials-section py-5">
         <div className="container">
           <h2 className="text-center mb-4">What Our Users Say</h2>
@@ -222,7 +222,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-  
+
       {/* Footer Section */}
       <footer className="text-dark py-4 footer-custom">
         <div className="container">
@@ -236,7 +236,7 @@ const Home = () => {
                 <li><a href="#" className="text-dark mx-2">Contact</a></li>
               </ul>
             </div>
-    
+
             {/* Right side with social media icons */}
             <div className="col-md-6 text-right">
               <i className="mx-2 bi bi-arrow-clockwise"></i>
