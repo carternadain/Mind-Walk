@@ -96,8 +96,8 @@ const Home = () => {
         <div className="container">
           <div className="row">
             <div className="col-md-12 text-center">
-              <h2>Unlock Your Potential with Mind Walk</h2>
-              <p>Experience a transformative journey towards a happier and more fulfilling life.</p>
+              <h2>Unlock a better you with Mind Walk</h2>
+              <p>Discover essential self-help tips for managing stress, handling pressure, and improving self-image to enhance your well-being.</p>
               <button className="btn btn-primary">Try Now</button>
             </div>
           </div>
@@ -140,10 +140,15 @@ const Home = () => {
   </Swiper>
 </section>
 
+    <div className="features-section py-5">
+     <div className="container">
+     <h2 className="text-center mb-4 text-decoration-underline">Key Features</h2>
+     <p className="text-center">
+      Our self-help application is designed to guide you on a journey towards better mental and emotional well-being. By offering practical tips and techniques to manage stress, handle pressure, and build a positive self-image, our app empowers you to take control of your life. Whether you're looking to reduce anxiety, enhance your resilience, or foster a healthier self-perception, our tailored resources and guided exercises provide the support you need. Experience the transformative benefits of self-improvement and unlock a happier, more fulfilling life with our app.
+     </p>
 
-      <div className="features-section py-5">
-        <div className="container">
-          <h2 className="text-center mb-4 text-decoration-underline">Key Features</h2>
+
+
 
           {/* Stress Relief */}
           <div className="row align-items-center">
