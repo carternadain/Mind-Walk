@@ -143,7 +143,7 @@ const Home = () => {
     <div className="features-section py-5">
      <div className="container">
      <h2 className="text-center mb-4 text-decoration-underline">Key Features</h2>
-     <p className="text-center">
+     <p className="text-center pb-4">
       Our self-help application is designed to guide you on a journey towards better mental and emotional well-being. By offering practical tips and techniques to manage stress, handle pressure, and build a positive self-image, our app empowers you to take control of your life. Whether you're looking to reduce anxiety, enhance your resilience, or foster a healthier self-perception, our tailored resources and guided exercises provide the support you need. Experience the transformative benefits of self-improvement and unlock a happier, more fulfilling life with our app.
      </p>
 
@@ -151,7 +151,7 @@ const Home = () => {
 
 
           {/* Stress Relief */}
-          <div className="row align-items-center">
+          <div className="row align-items-center pt-4">
             {/* Left Side */}
             <div className="col-md-6 text-center mb-4">
               <div>
