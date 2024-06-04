@@ -79,7 +79,7 @@ const Home = () => {
             <div className="col-md-6 text-center">
               <h1>Discover Your Potential with Mind Walk</h1>
               <p>Mind Walk is your personal guide to conquering obstacles, nurturing your well-being, and unlocking your true potential. Embark on a transformative journey towards a happier and more fulfilling life.</p>
-              <button className="btn btn-primary">Get Started</button>
+              <button className="btn btn-dark">Get Started</button>
             </div>
 
             {/* Right Side */}
@@ -98,7 +98,7 @@ const Home = () => {
             <div className="col-md-12 text-center">
               <h2>Unlock a better you with Mind Walk</h2>
               <p>Discover essential self-help tips for managing stress, handling pressure, and improving self-image to enhance your well-being.</p>
-              <button className="btn btn-primary">Try Now</button>
+              <button className="btn btn-dark">Try Now</button>
             </div>
           </div>
         </div>

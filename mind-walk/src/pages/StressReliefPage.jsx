@@ -45,7 +45,7 @@ const StressReliefPage = () => {
                   <li>Decreased concentration or irritability</li>
                 </ul>
                 <p>Understanding these signs can help you take proactive steps towards managing stress effectively.</p>
-                <Button variant="primary" onClick={() => handleShow('stressInfo')}>Learn More</Button>
+                <Button variant="btn btn-dark" onClick={() => handleShow('stressInfo')}>Learn More</Button>
               </div>
             </div>
           </div>
@@ -70,7 +70,7 @@ const StressReliefPage = () => {
                 <Card.Text>
                   Incorporate journaling sessions to help users relax and reduce stress levels.
                 </Card.Text>
-                <Button variant="primary" onClick={() => handleShow('journaling')}>Learn More</Button>
+                <Button variant="btn btn-dark" onClick={() => handleShow('journaling')}>Learn More</Button>
               </Card.Body>
             </Card>
           </div>
@@ -83,7 +83,7 @@ const StressReliefPage = () => {
                 <Card.Text>
                   Encourage users to engage in physical activities to boost mood and reduce stress.
                 </Card.Text>
-                <Button variant="primary" onClick={() => handleShow('exercise')}>Explore</Button>
+                <Button variant="btn btn-dark" onClick={() => handleShow('exercise')}>Explore</Button>
               </Card.Body>
             </Card>
           </div>
@@ -96,7 +96,7 @@ const StressReliefPage = () => {
                 <Card.Text>
                   Join a community and express what you're going through in life. It can help you feel supported.
                 </Card.Text>
-                <Button variant="primary" onClick={() => handleShow('community')}>Discover</Button>
+                <Button variant="btn btn-dark" onClick={() => handleShow('community')}>Discover</Button>
               </Card.Body>
             </Card>
           </div>
@@ -126,7 +126,7 @@ const StressReliefPage = () => {
           </ul>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={() => handleClose('stressInfo')}>Close</Button>
+          <Button variant="btn btn-dark" onClick={() => handleClose('stressInfo')}>Close</Button>
         </Modal.Footer>
       </Modal>
 
@@ -153,7 +153,7 @@ const StressReliefPage = () => {
           </Form>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={() => handleClose('journaling')}>Close</Button>
+          <Button variant="btn btn-dark" onClick={() => handleClose('journaling')}>Close</Button>
         </Modal.Footer>
       </Modal>
 
@@ -170,7 +170,7 @@ const StressReliefPage = () => {
           </ul>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={() => handleClose('exercise')}>Close</Button>
+          <Button variant="btn btn-dark" onClick={() => handleClose('exercise')}>Close</Button>
         </Modal.Footer>
       </Modal>
 
@@ -182,7 +182,7 @@ const StressReliefPage = () => {
           <p>Connecting with others can help you feel supported and understood. Consider joining a community or support group.</p>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={() => handleClose('community')}>Close</Button>
+          <Button variant="btn btn-dark" onClick={() => handleClose('community')}>Close</Button>
         </Modal.Footer>
       </Modal>
 
@@ -199,7 +199,7 @@ const StressReliefPage = () => {
           </ul>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={() => handleClose('resources')}>Close</Button>
+          <Button variant="btn btn-dark" onClick={() => handleClose('resources')}>Close</Button>
         </Modal.Footer>
       </Modal>
     </MainLayout>

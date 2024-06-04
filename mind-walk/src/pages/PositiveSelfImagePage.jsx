@@ -38,7 +38,7 @@ const PositiveSelfImagePage = () => {
                   <li>Avoidance of social situations due to insecurity</li>
                 </ul>
                 <p>Investing in your self-image can lead to greater happiness and success.</p>
-                <Button variant="primary">Learn More</Button>
+                <Button variant="btn btn-dark">Learn More</Button>
               </div>
             </div>
           </div>
@@ -54,7 +54,7 @@ const PositiveSelfImagePage = () => {
                 <Card.Text>
                   Engage in self-reflection to identify and challenge negative beliefs about yourself.
                 </Card.Text>
-                <Button variant="primary" onClick={() => handleShow('selfReflection')}>Learn More</Button>
+                <Button variant="btn btn-dark" onClick={() => handleShow('selfReflection')}>Learn More</Button>
               </Card.Body>
             </Card>
           </div>
@@ -66,7 +66,7 @@ const PositiveSelfImagePage = () => {
                 <Card.Text>
                   Practice positive affirmations to cultivate self-love and acceptance.
                 </Card.Text>
-                <Button variant="primary" onClick={() => handleShow('positiveAffirmations')}>Explore</Button>
+                <Button variant="btn btn-dark" onClick={() => handleShow('positiveAffirmations')}>Explore</Button>
               </Card.Body>
             </Card>
           </div>
@@ -78,7 +78,7 @@ const PositiveSelfImagePage = () => {
                 <Card.Text>
                   Reach out to friends, family, or a therapist for encouragement and guidance.
                 </Card.Text>
-                <Button variant="primary" onClick={() => handleShow('seekSupport')}>Discover</Button>
+                <Button variant="btn btn-dark" onClick={() => handleShow('seekSupport')}>Discover</Button>
               </Card.Body>
             </Card>
           </div>
@@ -109,7 +109,7 @@ const PositiveSelfImagePage = () => {
               <label htmlFor="reflection">Write your reflection:</label>
               <textarea className="form-control" id="reflection" rows="3"></textarea>
             </div>
-            <Button variant="primary" type="submit">Submit</Button>
+            <Button variant="btn btn-dark" type="submit">Submit</Button>
           </form>
         </Modal.Body>
         <Modal.Footer>

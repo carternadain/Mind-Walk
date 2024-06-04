@@ -52,7 +52,7 @@ const Login = () => {
                 <label htmlFor="password">Password</label>
                 <input type="password" className="form-control" id="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password" />
               </div>
-              <button type="submit" className="btn btn-primary btn-block">Login</button>
+              <button type="submit" className="btn btn-dark">Login</button>
             </form>
             {message && <div className="mt-3 alert alert-info">{message}</div>}
           </div>
