@@ -78,7 +78,7 @@ const Home = () => {
             {/* Left Side */}
             <div className="col-md-6 text-center">
               <h1>Discover Your Potential with Mind Walk</h1>
-              <p>Mind Walk is your personal guide to conquering obstacles, nurturing your well-being, and unlocking your true potential. Embark on a transformative journey towards a happier and more fulfilling life.</p>
+              <p className='testimonial-box'>Mind Walk is your personal guide to conquering obstacles, nurturing your well-being, and unlocking your true potential. Embark on a transformative journey towards a happier and more fulfilling life.</p>
               <button className="btn btn-dark">Get Started</button>
             </div>
 
@@ -97,7 +97,7 @@ const Home = () => {
           <div className="row">
             <div className="col-md-12 text-center">
               <h2>Unlock a better you with Mind Walk</h2>
-              <p>Discover essential self-help tips for managing stress, handling pressure, and improving self-image to enhance your well-being.</p>
+              <p> Discover essential self-help tips for managing stress, handling pressure, and improving self-image to enhance your well-being.</p>
               <button className="btn btn-dark">Try Now</button>
             </div>
           </div>
@@ -143,7 +143,7 @@ const Home = () => {
     <div className="features-section py-5">
      <div className="container">
      <h2 className="text-center mb-4 text-decoration-underline">Key Features</h2>
-     <p className="text-center pb-4">
+     <p className="text-center pb-4 testimonial-box">
       Our self-help application is designed to guide you on a journey towards better mental and emotional well-being. By offering practical tips and techniques to manage stress, handle pressure, and build a positive self-image, our app empowers you to take control of your life. Whether you're looking to reduce anxiety, enhance your resilience, or foster a healthier self-perception, our tailored resources and guided exercises provide the support you need. Experience the transformative benefits of self-improvement and unlock a happier, more fulfilling life with our app.
      </p>
 
@@ -159,7 +159,7 @@ const Home = () => {
               </div>
             </div>
             {/* Right Side */}
-            <div className="col-md-6 text-center mb-4">
+            <div className="col-md-6 text-center mb-4 testimonial-box">
               <div>
                 <h3>Stress Relief</h3>
                 <p>Our app offers a variety of stress-relief techniques, including guided meditations, breathing exercises, and mindfulness practices. Take a moment to relax and unwind, no matter where you are.</p>
@@ -170,7 +170,7 @@ const Home = () => {
           {/* Pressure Management */}
           <div className="row align-items-center">
             {/* Right Side */}
-            <div className="col-md-6 text-center mb-4">
+            <div className="col-md-6 text-center mb-4 testimonial-box">
               <div>
                 <h3>Pressure Management</h3>
                 <p>Manage your work and personal pressures with ease using our app's intuitive tools and resources. From time-management techniques to stress-busting strategies, we've got you covered.</p>
@@ -193,7 +193,7 @@ const Home = () => {
               </div>
             </div>
             {/* Right Side */}
-            <div className="col-md-6 text-center mb-4">
+            <div className="col-md-6 text-center mb-4 testimonial-box">
               <div>
                 <h3>Positive Self-Image</h3>
                 <p>Cultivate a positive self-image and boost your self-confidence with our app's empowering features. Practice self-care, affirmations, and goal-setting to foster a healthier relationship with yourself.</p>
