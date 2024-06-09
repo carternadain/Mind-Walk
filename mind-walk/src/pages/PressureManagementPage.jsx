@@ -24,7 +24,7 @@ const PressureManagementPage = () => {
                     <li>Changes in mood or irritability</li>
                   </ul>
                   <p>Recognizing these signs is the first step towards managing pressure in a healthy way.</p>
-                  <Button variant="primary">Learn More</Button>
+                  <Button variant="btn btn-dark">Learn More</Button>
                 </div>
               </div>
             </div>
@@ -47,7 +47,7 @@ const PressureManagementPage = () => {
                   <Card.Text>
                     Improve time management skills to prioritize tasks and reduce feelings of overwhelm.
                   </Card.Text>
-                  <Link to="/time-management" className="btn btn-primary">
+                  <Link to="/time-management" className="btn btn-dark">
                     Learn More</Link>
                 </Card.Body>
               </Card>
@@ -59,7 +59,7 @@ const PressureManagementPage = () => {
                   <Card.Text>
                     Practice stress reduction techniques such as mindfulness and deep breathing exercises.
                   </Card.Text>
-                  <Link to="/stress-reduction" className="btn btn-primary">
+                  <Link to="/stress-reduction" className="btn btn-dark">
                     Explore</Link>
                 </Card.Body>
               </Card>
@@ -71,7 +71,7 @@ const PressureManagementPage = () => {
                   <Card.Text>
                     Establish clear boundaries to manage expectations and reduce pressure from others.
                   </Card.Text>
-                  <Link to="/setting-boundaries" className="btn btn-primary">
+                  <Link to="/setting-boundaries" className="btn btn-dark">
                     Discover</Link>
                 </Card.Body>
               </Card>
@@ -82,7 +82,7 @@ const PressureManagementPage = () => {
           <div className="text-center mt-5">
             <h3>Explore More Resources</h3>
             <p>Discover additional tools and resources to help you manage pressure and thrive in challenging situations.</p>
-            <Button variant="outline-primary">View All Resources</Button>
+            <Button variant="btn btn-dark">View All Resources</Button>
           </div>
         </div>
       </MainLayout>

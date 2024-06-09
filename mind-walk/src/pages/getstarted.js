@@ -58,7 +58,7 @@ const GetStarted = () => {
                 <label htmlFor="password">Password</label>
                 <input type="password" className="form-control" id="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Password" />
               </div>
-              <button type="submit" className="btn btn-primary btn-block">Sign Up</button>
+              <button type="submit" className="btn btn-dark">Sign Up</button>
             </form>
             {message && <div className="mt-3 alert alert-info">{message}</div>}
           </div>
