@@ -7,6 +7,8 @@ import { MainLayout } from "../components/MainLayout";
 const StressReliefPage = () => {
   const [showModal, setShowModal] = useState({});
   const [formData, setFormData] = useState({ stressLevel: '', journalEntry: '' });
+  const [quizAnswers, setQuizAnswers] = useState({ question1: '', question2: '', question3: '' });
+  const [quizResult, setQuizResult] = useState('');
 
   const handleShow = (modal) => {
     setShowModal((prev) => ({ ...prev, [modal]: true }));
@@ -21,9 +23,28 @@ const StressReliefPage = () => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
+  const handleQuizChange = (e) => {
+    const { name, value } = e.target;
+    setQuizAnswers((prev) => ({ ...prev, [name]: value }));
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Form Data Submitted:', formData);
+  };
+
+  const handleQuizSubmit = (e) => {
+    e.preventDefault();
+    const { question1, question2, question3 } = quizAnswers;
+    // Simple logic to determine quiz result based on answers
+    if (question1 === 'often' && question2 === 'often' && question3 === 'often') {
+      setQuizResult('You might be experiencing high levels of stress. Consider talking to a professional.');
+    } else if (question1 === 'sometimes' || question2 === 'sometimes' || question3 === 'sometimes') {
+      setQuizResult('You are experiencing some stress. Try incorporating stress management techniques into your routine.');
+    } else {
+      setQuizResult('You seem to have a low level of stress. Keep up the good work!');
+    }
+    handleShow('quizResult');
   };
 
   return (
@@ -200,6 +221,62 @@ const StressReliefPage = () => {
         </Modal.Body>
         <Modal.Footer>
           <Button variant="btn btn-dark" onClick={() => handleClose('resources')}>Close</Button>
+        </Modal.Footer>
+      </Modal>
+
+      <Modal show={showModal.quiz} onHide={() => handleClose('quiz')}>
+        <Modal.Header closeButton>
+          <Modal.Title>Stress Management Quiz</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <Form onSubmit={handleQuizSubmit}>
+            <Form.Group controlId="question1">
+              <Form.Label>How often do you feel overwhelmed by your responsibilities?</Form.Label>
+              <Form.Control as="select" name="question1" value={quizAnswers.question1} onChange={handleQuizChange}>
+                <option value="">Select an option</option>
+                <option value="often">Often</option>
+                <option value="sometimes">Sometimes</option>
+                <option value="rarely">Rarely</option>
+              </Form.Control>
+            </Form.Group>
+            <Form.Group controlId="question2">
+              <Form.Label>How often do you experience physical symptoms of stress (e.g., headaches, muscle tension)?</Form.Label>
+              <Form.Control as="select" name="question2" value={quizAnswers.question2} onChange={handleQuizChange}>
+                <option value="">Select an option</option>
+                <option value="often">Often</option>
+                <option value="sometimes">Sometimes</option>
+                <option value="rarely">Rarely</option>
+              </Form.Control>
+            </Form.Group>
+            <Form.Group controlId="question3">
+              <Form.Label>How often do you find it difficult to concentrate due to stress?</Form.Label>
+              <Form.Control as="select" name="question3" value={quizAnswers.question3} onChange={handleQuizChange}>
+                <option value="">Select an option</option>
+                <option value="often">Often</option>
+                <option value="sometimes">Sometimes</option>
+                <option value="rarely">Rarely</option>
+              </Form.Control>
+            </Form.Group>
+            <Button variant="primary" type="submit">
+              Submit
+            </Button>
+          </Form>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="btn btn-dark" onClick={() => handleClose('quiz')}>Close</Button>
+        </Modal.Footer>
+      </Modal>
+
+      {/* Quiz Result Modal */}
+      <Modal show={showModal.quizResult} onHide={() => handleClose('quizResult')}>
+        <Modal.Header closeButton>
+          <Modal.Title>Quiz Result</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <p>{quizResult}</p>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="btn btn-dark" onClick={() => handleClose('quizResult')}>Close</Button>
         </Modal.Footer>
       </Modal>
     </MainLayout>
