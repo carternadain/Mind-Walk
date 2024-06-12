@@ -1,17 +1,16 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import { Swiper, SwiperSlide } from 'swiper/react';
 import './style.css'
-import zenImage from '../images/zen.jpg';
+import clouds2 from '../images/clouds2.JPG';
 import cloudsImage from '../images/clouds.jpg';
-import rainbowImage from '../images/rainbow.jpg';
-import peaceImage from '../images/peace.jpg';
 import highsky from '../images/highsky.JPG';
 import palmtree from '../images/palmtree.JPG';
-import clouds2 from '../images/clouds2.JPG';
+import peaceImage from '../images/peace.jpg';
+import rainbowImage from '../images/rainbow.jpg';
 
 const Home = () => {
   const token = localStorage.getItem('token');
@@ -72,25 +71,20 @@ const Home = () => {
         </div>
       </nav>
 
-      <div className="hero-section">
-        <div className="container">
-          <div className="row align-items-center">
-            {/* Left Side */}
-            <div className="col-md-6 text-center">
-              <h1>Discover Your Potential with Mind Walk</h1>
-              <p className='testimonial-box'>Mind Walk is your personal guide to conquering obstacles, nurturing your well-being, and unlocking your true potential. Embark on a transformative journey towards a happier and more fulfilling life.</p>
-              <button className="btn btn-dark">Get Started</button>
-            </div>
 
-            {/* Right Side */}
-            <div className="col-md-6">
-              <div className="blank-square">
-                <img src={zenImage} alt="Zen" className="img-fluid rounded" />
-              </div>
-            </div>
+      <div className="hero-section bg-image">
+        <div className="container">
+          <div className="text-center">
+            <h1 className="hero-section--header">Discover Your Potential with Mind Walk</h1>
+            <p>
+              <span className="hero-section--text">Mind Walk is your personal guide to conquering obstacles, nurturing your well-being, and unlocking your true potential.</span>
+              <span className="hero-section--text">Embark on a transformative journey towards a happier and more fulfilling life.</span>
+            </p>
+            <button className="btn btn-dark">Get Started</button>
           </div>
         </div>
       </div>
+
 
       <div className="feature-section py-5">
         <div className="container">
@@ -135,7 +129,7 @@ const Home = () => {
         </div>
       </div>
     </SwiperSlide>
-    
+
     {/* Add more SwiperSlides for additional content if needed */}
   </Swiper>
 </section>
