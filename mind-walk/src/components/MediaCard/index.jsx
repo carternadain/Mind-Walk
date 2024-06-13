@@ -1,6 +1,6 @@
 export function MediaCard(props) {
     const { alt, image, text, title } = props.data;
-    const reverseClass = props.reverseOrder ? 'flex-row-reverse' : '';
+    const reverseClass = props.isReverseOrder ? 'flex-row-reverse' : '';
 
     return (
         <div className={`row align-items-center pt-4 ${reverseClass}`}>

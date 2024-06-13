@@ -163,7 +163,7 @@ const Home = () => {
           Our self-help application is designed to guide you on a journey towards better mental and emotional well-being. By offering practical tips and techniques to manage stress, handle pressure, and build a positive self-image, our app empowers you to take control of your life. Whether you're looking to reduce anxiety, enhance your resilience, or foster a healthier self-perception, our tailored resources and guided exercises provide the support you need. Experience the transformative benefits of self-improvement and unlock a happier, more fulfilling life with our app.
          </p>
           <MediaCard data={MEDIA_CARDS.STRESS} />
-          <MediaCard data={MEDIA_CARDS.PRESSURE} reverseOrder={true}/>
+          <MediaCard data={MEDIA_CARDS.PRESSURE} isReverseOrder={true}/>
           <MediaCard data={MEDIA_CARDS.SELF_IMAGE} />
       </div>
     </div>
