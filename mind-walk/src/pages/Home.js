@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
+import { MediaCard } from "../components/MediaCard";
 import 'swiper/css';
 import 'swiper/css/navigation';
 import './style.css'
@@ -11,6 +12,27 @@ import highsky from '../images/highsky.JPG';
 import palmtree from '../images/palmtree.JPG';
 import peaceImage from '../images/peace.jpg';
 import rainbowImage from '../images/rainbow.jpg';
+
+const MEDIA_CARDS = {
+  STRESS: {
+    alt: "peace",
+    title: "Stress Relief",
+    image: peaceImage,
+    text: "Our app offers a variety of stress-relief techniques, including guided meditations, breathing exercises, and mindfulness practices. Take a moment to relax and unwind, no matter where you are.",
+  },
+  PRESSURE: {
+    alt: "rainbow",
+    title: "Pressure Management",
+    image: rainbowImage,
+    text: "Manage your work and personal pressures with ease using our app's intuitive tools and resources. From time-management techniques to stress-busting strategies, we've got you covered.",
+  },
+  SELF_IMAGE: {
+    alt: "clouds",
+    title: "Positive Self-Image",
+    image: cloudsImage,
+    text: "Cultivate a positive self-image and boost your self-confidence with our app's empowering features. Practice self-care, affirmations, and goal-setting to foster a healthier relationship with yourself.",
+  },
+}
 
 const Home = () => {
   const token = localStorage.getItem('token');
@@ -135,67 +157,16 @@ const Home = () => {
 </section>
 
     <div className="features-section py-5">
-     <div className="container">
-     <h2 className="text-center mb-4 text-decoration-underline">Key Features</h2>
-     <p className="text-center pb-4 testimonial-box">
-      Our self-help application is designed to guide you on a journey towards better mental and emotional well-being. By offering practical tips and techniques to manage stress, handle pressure, and build a positive self-image, our app empowers you to take control of your life. Whether you're looking to reduce anxiety, enhance your resilience, or foster a healthier self-perception, our tailored resources and guided exercises provide the support you need. Experience the transformative benefits of self-improvement and unlock a happier, more fulfilling life with our app.
-     </p>
-
-
-
-
-          {/* Stress Relief */}
-          <div className="row align-items-center pt-4">
-            {/* Left Side */}
-            <div className="col-md-6 text-center mb-4">
-              <div>
-                <img src={peaceImage} alt="peace" className="img-fluid mb-3 rounded" />
-              </div>
-            </div>
-            {/* Right Side */}
-            <div className="col-md-6 text-center mb-4 testimonial-box">
-              <div>
-                <h3>Stress Relief</h3>
-                <p>Our app offers a variety of stress-relief techniques, including guided meditations, breathing exercises, and mindfulness practices. Take a moment to relax and unwind, no matter where you are.</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Pressure Management */}
-          <div className="row align-items-center">
-            {/* Right Side */}
-            <div className="col-md-6 text-center mb-4 testimonial-box">
-              <div>
-                <h3>Pressure Management</h3>
-                <p>Manage your work and personal pressures with ease using our app's intuitive tools and resources. From time-management techniques to stress-busting strategies, we've got you covered.</p>
-              </div>
-            </div>
-            {/* Left Side */}
-            <div className="col-md-6 text-center mb-4">
-              <div>
-                <img src={rainbowImage} alt="rainbow" className="img-fluid mb-3 rounded" />
-              </div>
-            </div>
-          </div>
-
-          {/* Positive Self-Image */}
-          <div className="row align-items-center">
-            {/* Left Side */}
-            <div className="col-md-6 text-center mb-4">
-              <div>
-                <img src={cloudsImage} alt="clouds" className="img-fluid mb-3 rounded" />
-              </div>
-            </div>
-            {/* Right Side */}
-            <div className="col-md-6 text-center mb-4 testimonial-box">
-              <div>
-                <h3>Positive Self-Image</h3>
-                <p>Cultivate a positive self-image and boost your self-confidence with our app's empowering features. Practice self-care, affirmations, and goal-setting to foster a healthier relationship with yourself.</p>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div className="container">
+        <h2 className="text-center mb-4 text-decoration-underline">Key Features</h2>
+         <p className="text-center pb-4 testimonial-box">
+          Our self-help application is designed to guide you on a journey towards better mental and emotional well-being. By offering practical tips and techniques to manage stress, handle pressure, and build a positive self-image, our app empowers you to take control of your life. Whether you're looking to reduce anxiety, enhance your resilience, or foster a healthier self-perception, our tailored resources and guided exercises provide the support you need. Experience the transformative benefits of self-improvement and unlock a happier, more fulfilling life with our app.
+         </p>
+          <MediaCard data={MEDIA_CARDS.STRESS} />
+          <MediaCard data={MEDIA_CARDS.PRESSURE} isReverseOrder={true}/>
+          <MediaCard data={MEDIA_CARDS.SELF_IMAGE} />
       </div>
+    </div>
 
       <div className="testimonials-section py-5">
         <div className="container">
