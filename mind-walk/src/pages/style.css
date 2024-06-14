@@ -63,7 +63,7 @@
 
 }
 
-.mind{
+.mind {
     height: 1500px;
     width: 1500px;
     object-fit: contain;
@@ -72,7 +72,7 @@
     top: 50%;
     transform: translateY(-50%);
     margin-right: -300px;
-    }
+}
 
 .container {
     text-align: left;
