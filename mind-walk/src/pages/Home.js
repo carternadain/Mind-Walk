@@ -174,37 +174,53 @@ const Home = () => {
       </div>
     </div>
 
-      <div className="testimonials-section py-5">
-        <div className="container">
-          <h2 className="text-center mb-4">What Our Users Say</h2>
-          <div className="row">
-            <div className="col-md-4 mt-4">
-              <div className="testimonial-box">
-                <div className="testimonial-content">
-                  <p>Mind Walk has been an absolute game-changer for me. It's helped me manage my stress levels and stay focused on my goals. Highly recommend!</p>
-                  <p>- Emily Smith</p>
-                </div>
-              </div>
+    <div className="testimonials-section py-5">
+  <div className="container">
+    <h2 className="text-center mb-4">What Our Users Say</h2>
+    <div className="row">
+      {[
+        {
+          name: "Emily Johnson",
+          content: "Mind Walk has completely changed how I approach my day-to-day life. With its help, I manage my stress and stay focused on my goals. Highly recommend!",
+          photo: "path_to_emily_photo.jpg",
+          title: "Marketing Specialist",
+          rating: 5
+        },
+        {
+          name: "John Camp",
+          content: "Using Mind Walk has been a revelation. It feels like having a personal coach guiding me through life’s challenges, making everything easier to handle.",
+          photo: "path_to_john_photo.jpg",
+          title: "Software Engineer",
+          rating: 5
+        },
+        {
+          name: "Sarah Nadain",
+          content: "Mind Walk has transformed my mindset and given me a positive outlook on life. I now feel more confident and empowered. Thank you, Mind Walk!",
+          photo: "path_to_sarah_photo.jpg",
+          title: "Freelance Writer",
+          rating: 5
+        }
+      ].map((testimonial, index) => (
+        <div className="col-md-4 mt-4" key={index}>
+          <div className="testimonial-box p-3" style={{ border: '1px solid #ddd', borderRadius: '8px', backgroundColor: '#f9f9f9' }}>
+            <div className="testimonial-photo text-center mb-3">
+              <img src={testimonial.photo} alt={testimonial.name} className="rounded-circle" width="80" height="80" />
             </div>
-            <div className="col-md-4 mt-4">
-              <div className="testimonial-box">
-                <div className="testimonial-content">
-                  <p>I never realized how much I needed Mind Walk until I started using it. It's like having a personal coach in my pocket, guiding me through life's challenges with ease.</p>
-                  <p>- John Doe</p>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-4 mt-4">
-              <div className="testimonial-box">
-                <div className="testimonial-content">
-                  <p>Mind Walk has transformed my mindset and helped me cultivate a more positive outlook on life. I feel more confident and empowered than ever before. Thank you!</p>
-                  <p>- Sarah Johnson</p>
-                </div>
+            <div className="testimonial-content">
+              <p className="font-italic">"{testimonial.content}"</p>
+              <p className="font-weight-bold mb-0">- {testimonial.name}</p>
+              <p className="text-muted mb-1">{testimonial.title}</p>
+              <div className="testimonial-rating">
+                {"★".repeat(testimonial.rating) + "☆".repeat(5 - testimonial.rating)}
               </div>
             </div>
           </div>
         </div>
-      </div>
+      ))}
+    </div>
+  </div>
+</div>
+
 
       {/* Footer Section */}
       <footer className="text-dark py-4 footer-custom">
