@@ -1,17 +1,38 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
+import { MediaCard } from "../components/MediaCard";
 import 'swiper/css';
 import 'swiper/css/navigation';
-import { Swiper, SwiperSlide } from 'swiper/react';
 import './style.css'
-import zenImage from '../images/zen.jpg';
+import clouds2 from '../images/clouds2.JPG';
 import cloudsImage from '../images/clouds.jpg';
-import rainbowImage from '../images/rainbow.jpg';
-import peaceImage from '../images/peace.jpg';
 import highsky from '../images/highsky.JPG';
 import palmtree from '../images/palmtree.JPG';
-import clouds2 from '../images/clouds2.JPG';
+import peaceImage from '../images/peace.jpg';
+import rainbowImage from '../images/rainbow.jpg';
+
+const MEDIA_CARDS = {
+  STRESS: {
+    alt: "peace",
+    title: "Stress Relief",
+    image: peaceImage,
+    text: "Our app offers a variety of stress-relief techniques, including guided meditations, breathing exercises, and mindfulness practices. Take a moment to relax and unwind, no matter where you are.",
+  },
+  PRESSURE: {
+    alt: "rainbow",
+    title: "Pressure Management",
+    image: rainbowImage,
+    text: "Manage your work and personal pressures with ease using our app's intuitive tools and resources. From time-management techniques to stress-busting strategies, we've got you covered.",
+  },
+  SELF_IMAGE: {
+    alt: "clouds",
+    title: "Positive Self-Image",
+    image: cloudsImage,
+    text: "Cultivate a positive self-image and boost your self-confidence with our app's empowering features. Practice self-care, affirmations, and goal-setting to foster a healthier relationship with yourself.",
+  },
+}
 
 const Home = () => {
   const token = localStorage.getItem('token');
@@ -72,25 +93,20 @@ const Home = () => {
         </div>
       </nav>
 
-      <div className="hero-section">
-        <div className="container">
-          <div className="row align-items-center">
-            {/* Left Side */}
-            <div className="col-md-6 text-center">
-              <h1>Discover Your Potential with Mind Walk</h1>
-              <p className='testimonial-box'>Mind Walk is your personal guide to conquering obstacles, nurturing your well-being, and unlocking your true potential. Embark on a transformative journey towards a happier and more fulfilling life.</p>
-              <button className="btn btn-dark">Get Started</button>
-            </div>
 
-            {/* Right Side */}
-            <div className="col-md-6">
-              <div className="blank-square">
-                <img src={zenImage} alt="Zen" className="img-fluid rounded" />
-              </div>
-            </div>
+      <div className="hero-section bg-image">
+        <div className="container">
+          <div className="text-center">
+            <h1 className="hero-section--header">Discover Your Potential with Mind Walk</h1>
+            <p>
+              <span className="hero-section--text">Mind Walk is your personal guide to conquering obstacles, nurturing your well-being, and unlocking your true potential.</span>
+              <span className="hero-section--text">Embark on a transformative journey towards a happier and more fulfilling life.</span>
+            </p>
+            <button className="btn btn-dark">Get Started</button>
           </div>
         </div>
       </div>
+
 
       <div className="feature-section py-5">
         <div className="container">
@@ -109,131 +125,102 @@ const Home = () => {
     <SwiperSlide>
       <div className="feature card">
         <img src={palmtree} alt="tree" />
-        <div className="text-overlay">
-          <h2>Stress Relief</h2>
-          <p>Explore guided meditations and breathing exercises to find inner calm and reduce stress.</p>
-        </div>
+        <Link to="/stress-relief">
+          <div className="text-overlay">
+            <h2>Stress Relief</h2>
+            <p>Explore guided meditations and breathing exercises to find inner calm and reduce stress.</p>
+          </div>
+        </Link>
       </div>
     </SwiperSlide>
 
     <SwiperSlide>
       <div className="feature card">
         <img src={highsky} alt="sky" />
+        <Link to="/pressure-management">
         <div className="text-overlay">
           <h2>Pressure Management</h2>
           <p>Learn techniques to manage external pressures and maintain balance in your daily life.</p>
         </div>
+        </Link>
       </div>
     </SwiperSlide>
 
     <SwiperSlide>
       <div className="feature card">
         <img src={clouds2} alt="clouds" />
-        <div className="text-overlay">
-          <h2>Positive Self-Image</h2>
-          <p>Build a positive self-image through affirmations, self-reflection, and personal growth.</p>
-        </div>
+        <Link to="/positive-self-image">
+          <div className="text-overlay">
+            <h2>Positive Self-Image</h2>
+            <p>Build a positive self-image through affirmations, self-reflection, and personal growth.</p>
+          </div>
+        </Link>
       </div>
     </SwiperSlide>
-    
+
     {/* Add more SwiperSlides for additional content if needed */}
   </Swiper>
 </section>
 
     <div className="features-section py-5">
-     <div className="container">
-     <h2 className="text-center mb-4 text-decoration-underline">Key Features</h2>
-     <p className="text-center pb-4 testimonial-box">
-      Our self-help application is designed to guide you on a journey towards better mental and emotional well-being. By offering practical tips and techniques to manage stress, handle pressure, and build a positive self-image, our app empowers you to take control of your life. Whether you're looking to reduce anxiety, enhance your resilience, or foster a healthier self-perception, our tailored resources and guided exercises provide the support you need. Experience the transformative benefits of self-improvement and unlock a happier, more fulfilling life with our app.
-     </p>
+      <div className="container">
+        <h2 className="text-center mb-4 text-decoration-underline">Key Features</h2>
+         <p className="text-center pb-4 testimonial-box">
+          Our self-help application is designed to guide you on a journey towards better mental and emotional well-being. By offering practical tips and techniques to manage stress, handle pressure, and build a positive self-image, our app empowers you to take control of your life. Whether you're looking to reduce anxiety, enhance your resilience, or foster a healthier self-perception, our tailored resources and guided exercises provide the support you need. Experience the transformative benefits of self-improvement and unlock a happier, more fulfilling life with our app.
+         </p>
+          <MediaCard data={MEDIA_CARDS.STRESS} />
+          <MediaCard data={MEDIA_CARDS.PRESSURE} isReverseOrder={true}/>
+          <MediaCard data={MEDIA_CARDS.SELF_IMAGE} />
+      </div>
+    </div>
 
-
-
-
-          {/* Stress Relief */}
-          <div className="row align-items-center pt-4">
-            {/* Left Side */}
-            <div className="col-md-6 text-center mb-4">
-              <div>
-                <img src={peaceImage} alt="peace" className="img-fluid mb-3 rounded" />
-              </div>
+    <div className="testimonials-section py-5">
+  <div className="container">
+    <h2 className="text-center mb-4">What Our Users Say</h2>
+    <div className="row">
+      {[
+        {
+          name: "Emily Johnson",
+          content: "Mind Walk has completely changed how I approach my day-to-day life. With its help, I manage my stress and stay focused on my goals. Highly recommend!",
+          photo: "path_to_emily_photo.jpg",
+          title: "Marketing Specialist",
+          rating: 5
+        },
+        {
+          name: "John Camp",
+          content: "Using Mind Walk has been a revelation. It feels like having a personal coach guiding me through life’s challenges, making everything easier to handle.",
+          photo: "path_to_john_photo.jpg",
+          title: "Software Engineer",
+          rating: 5
+        },
+        {
+          name: "Sarah Nadain",
+          content: "Mind Walk has transformed my mindset and given me a positive outlook on life. I now feel more confident and empowered. Thank you, Mind Walk!",
+          photo: "path_to_sarah_photo.jpg",
+          title: "Freelance Writer",
+          rating: 5
+        }
+      ].map((testimonial, index) => (
+        <div className="col-md-4 mt-4" key={index}>
+          <div className="testimonial-box p-3" style={{ border: '1px solid #ddd', borderRadius: '8px', backgroundColor: '#f9f9f9' }}>
+            <div className="testimonial-photo text-center mb-3">
+              <img src={testimonial.photo} alt={testimonial.name} className="rounded-circle" width="80" height="80" />
             </div>
-            {/* Right Side */}
-            <div className="col-md-6 text-center mb-4 testimonial-box">
-              <div>
-                <h3>Stress Relief</h3>
-                <p>Our app offers a variety of stress-relief techniques, including guided meditations, breathing exercises, and mindfulness practices. Take a moment to relax and unwind, no matter where you are.</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Pressure Management */}
-          <div className="row align-items-center">
-            {/* Right Side */}
-            <div className="col-md-6 text-center mb-4 testimonial-box">
-              <div>
-                <h3>Pressure Management</h3>
-                <p>Manage your work and personal pressures with ease using our app's intuitive tools and resources. From time-management techniques to stress-busting strategies, we've got you covered.</p>
-              </div>
-            </div>
-            {/* Left Side */}
-            <div className="col-md-6 text-center mb-4">
-              <div>
-                <img src={rainbowImage} alt="rainbow" className="img-fluid mb-3 rounded" />
-              </div>
-            </div>
-          </div>
-
-          {/* Positive Self-Image */}
-          <div className="row align-items-center">
-            {/* Left Side */}
-            <div className="col-md-6 text-center mb-4">
-              <div>
-                <img src={cloudsImage} alt="clouds" className="img-fluid mb-3 rounded" />
-              </div>
-            </div>
-            {/* Right Side */}
-            <div className="col-md-6 text-center mb-4 testimonial-box">
-              <div>
-                <h3>Positive Self-Image</h3>
-                <p>Cultivate a positive self-image and boost your self-confidence with our app's empowering features. Practice self-care, affirmations, and goal-setting to foster a healthier relationship with yourself.</p>
+            <div className="testimonial-content">
+              <p className="font-italic">"{testimonial.content}"</p>
+              <p className="font-weight-bold mb-0">- {testimonial.name}</p>
+              <p className="text-muted mb-1">{testimonial.title}</p>
+              <div className="testimonial-rating">
+                {"★".repeat(testimonial.rating) + "☆".repeat(5 - testimonial.rating)}
               </div>
             </div>
           </div>
         </div>
-      </div>
+      ))}
+    </div>
+  </div>
+</div>
 
-      <div className="testimonials-section py-5">
-        <div className="container">
-          <h2 className="text-center mb-4">What Our Users Say</h2>
-          <div className="row">
-            <div className="col-md-4 mt-4">
-              <div className="testimonial-box">
-                <div className="testimonial-content">
-                  <p>Mind Walk has been an absolute game-changer for me. It's helped me manage my stress levels and stay focused on my goals. Highly recommend!</p>
-                  <p>- Emily Smith</p>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-4 mt-4">
-              <div className="testimonial-box">
-                <div className="testimonial-content">
-                  <p>I never realized how much I needed Mind Walk until I started using it. It's like having a personal coach in my pocket, guiding me through life's challenges with ease.</p>
-                  <p>- John Doe</p>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-4 mt-4">
-              <div className="testimonial-box">
-                <div className="testimonial-content">
-                  <p>Mind Walk has transformed my mindset and helped me cultivate a more positive outlook on life. I feel more confident and empowered than ever before. Thank you!</p>
-                  <p>- Sarah Johnson</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
 
       {/* Footer Section */}
       <footer className="text-dark py-4 footer-custom">
