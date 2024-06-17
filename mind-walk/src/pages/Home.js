@@ -125,30 +125,36 @@ const Home = () => {
     <SwiperSlide>
       <div className="feature card">
         <img src={palmtree} alt="tree" />
-        <div className="text-overlay">
-          <h2>Stress Relief</h2>
-          <p>Explore guided meditations and breathing exercises to find inner calm and reduce stress.</p>
-        </div>
+        <Link to="/stress-relief">
+          <div className="text-overlay">
+            <h2>Stress Relief</h2>
+            <p>Explore guided meditations and breathing exercises to find inner calm and reduce stress.</p>
+          </div>
+        </Link>
       </div>
     </SwiperSlide>
 
     <SwiperSlide>
       <div className="feature card">
         <img src={highsky} alt="sky" />
+        <Link to="/pressure-management">
         <div className="text-overlay">
           <h2>Pressure Management</h2>
           <p>Learn techniques to manage external pressures and maintain balance in your daily life.</p>
         </div>
+        </Link>
       </div>
     </SwiperSlide>
 
     <SwiperSlide>
       <div className="feature card">
         <img src={clouds2} alt="clouds" />
-        <div className="text-overlay">
-          <h2>Positive Self-Image</h2>
-          <p>Build a positive self-image through affirmations, self-reflection, and personal growth.</p>
-        </div>
+        <Link to="/positive-self-image">
+          <div className="text-overlay">
+            <h2>Positive Self-Image</h2>
+            <p>Build a positive self-image through affirmations, self-reflection, and personal growth.</p>
+          </div>
+        </Link>
       </div>
     </SwiperSlide>
 
