@@ -6,10 +6,10 @@ import { MediaCard } from "../components/MediaCard";
 import 'swiper/css';
 import 'swiper/css/navigation';
 import './style.css'
-import clouds2 from '../images/clouds2.JPG';
+import clouds2 from '../images/clouds2.jpg';
 import cloudsImage from '../images/clouds.jpg';
-import highsky from '../images/highsky.JPG';
-import palmtree from '../images/palmtree.JPG';
+import highsky from '../images/highsky.jpg';
+import palmtree from '../images/palmtree.jpg';
 import peaceImage from '../images/peace.jpg';
 import rainbowImage from '../images/rainbow.jpg';
 
