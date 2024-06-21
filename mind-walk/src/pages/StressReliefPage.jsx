@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Card, Button, Modal, Form } from 'react-bootstrap';
-import snowrock from '../images/snowrock.JPG';
+import snowrock from '../images/snowrock.jpg';
 import { MainLayout } from "../components/MainLayout";
 
 const StressReliefPage = () => {
