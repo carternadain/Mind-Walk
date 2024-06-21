@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Card, Button, Modal, Collapse } from 'react-bootstrap';
-import pastelcloud from '../images/pastelcloud.JPG';
+import pastelcloud from '../images/pastelcloud.jpg';
 import { MainLayout } from "../components/MainLayout";
 import { animateScroll as scroll } from 'react-scroll';
 

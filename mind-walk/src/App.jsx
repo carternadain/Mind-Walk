@@ -5,12 +5,12 @@ import StressReliefPage from './pages/StressReliefPage';
 import PressureManagementPage from './pages/PressureManagementPage';
 import PositiveSelfImagePage from './pages/PositiveSelfImagePage';
 import Login from './pages/login';
-import GetStarted from './pages/getstarted';
+import GetStarted from './pages/GetStarted';
 
 function App() {
   return (
     <Router>
-     
+
         <Routes>
           <Route path="/" element={<Home/>} />
           <Route path="/stress-relief" element={<StressReliefPage/>} />
@@ -19,7 +19,7 @@ function App() {
           <Route path='/login' element={<Login/>} />
           <Route path='/get-started' element={<GetStarted/>} />
         </Routes>
-       
+
     </Router>
   );
 }

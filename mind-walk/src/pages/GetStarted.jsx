@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 const GetStarted = () => {
   const [name, setName] = useState('');
@@ -38,7 +38,7 @@ const GetStarted = () => {
       const response = await axios.post('http://localhost:5000/register', { name, email, password });
       console.log('Registration successful:', response.data);
       setMessage('Registration successful! Redirecting to login page...');
-      
+
       // Clear form fields
       setName('');
       setEmail('');
