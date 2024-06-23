@@ -173,54 +173,94 @@ const Home = () => {
           <MediaCard data={MEDIA_CARDS.SELF_IMAGE} />
       </div>
     </div>
-
     <div className="testimonials-section py-5">
-  <div className="container">
-    <h2 className="text-center mb-4">What Our Users Say</h2>
-    <div className="row">
-      {[
-        {
-          name: "Emily Johnson",
-          content: "Mind Walk has completely changed how I approach my day-to-day life. With its help, I manage my stress and stay focused on my goals. Highly recommend!",
-          photo: "path_to_emily_photo.jpg",
-          title: "Marketing Specialist",
-          rating: 5
-        },
-        {
-          name: "John Camp",
-          content: "Using Mind Walk has been a revelation. It feels like having a personal coach guiding me through life’s challenges, making everything easier to handle.",
-          photo: "path_to_john_photo.jpg",
-          title: "Software Engineer",
-          rating: 5
-        },
-        {
-          name: "Sarah Nadain",
-          content: "Mind Walk has transformed my mindset and given me a positive outlook on life. I now feel more confident and empowered. Thank you, Mind Walk!",
-          photo: "path_to_sarah_photo.jpg",
-          title: "Freelance Writer",
-          rating: 5
-        }
-      ].map((testimonial, index) => (
-        <div className="col-md-4 mt-4" key={index}>
-          <div className="testimonial-box p-3" style={{ border: '1px solid #ddd', borderRadius: '8px', backgroundColor: '#f9f9f9' }}>
-            <div className="testimonial-photo text-center mb-3">
-              <img src={testimonial.photo} alt={testimonial.name} className="rounded-circle" width="80" height="80" />
-            </div>
-            <div className="testimonial-content">
-              <p className="font-italic">"{testimonial.content}"</p>
-              <p className="font-weight-bold mb-0">- {testimonial.name}</p>
-              <p className="text-muted mb-1">{testimonial.title}</p>
-              <div className="testimonial-rating">
-                {"★".repeat(testimonial.rating) + "☆".repeat(5 - testimonial.rating)}
+        <div className="container">
+          <h2 className="text-center mb-4">What Our Users Say</h2>
+          <div className="row">
+            {[
+              {
+                name: "Emily Johnson",
+                content: "Mind Walk has completely changed how I approach my day-to-day life. With its help, I manage my stress and stay focused on my goals. Highly recommend!",
+                photo: "path_to_emily_photo.jpg",
+                title: "Marketing Specialist",
+                rating: 5
+              },
+              {
+                name: "John Camp",
+                content: "Using Mind Walk has been a revelation. It feels like having a personal coach guiding me through life’s challenges, making everything easier to handle.",
+                photo: "path_to_john_photo.jpg",
+                title: "Software Engineer",
+                rating: 5
+              },
+              {
+                name: "Sarah Nadain",
+                content: "Mind Walk has transformed my mindset and given me a positive outlook on life. I now feel more confident and empowered. Thank you, Mind Walk!",
+                photo: "path_to_sarah_photo.jpg",
+                title: "Freelance Writer",
+                rating: 5
+              }
+            ].map((testimonial, index) => (
+              <div className="col-md-4 mt-4" key={index}>
+                <div className="testimonial-box p-3" style={{ border: '1px solid #ddd', borderRadius: '8px', backgroundColor: '#f9f9f9' }}>
+                  <div className="testimonial-photo text-center mb-3">
+                    <img src={testimonial.photo} alt={testimonial.name} className="rounded-circle" width="80" height="80" />
+                  </div>
+                  <div className="testimonial-content">
+                    <p className="font-italic">"{testimonial.content}"</p>
+                    <p className="font-weight-bold mb-0">- {testimonial.name}</p>
+                    <p className="text-muted mb-1">{testimonial.title}</p>
+                    <div className="testimonial-rating">
+                      {"★".repeat(testimonial.rating) + "☆".repeat(5 - testimonial.rating)}
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
+            ))}
           </div>
         </div>
-      ))}
-    </div>
-  </div>
-</div>
+      </div>
 
+      {/* Blog/Articles Section */}
+      <div className="blog-articles-section py-5 bg-light">
+        <div className="container">
+          <h2 className="text-center mb-4">Blog/Articles</h2>
+          <p className="text-center mb-4">
+            Discover insightful articles and blog posts about mental wellness, mindfulness, and stress management.
+          </p>
+          <div className="row">
+            {[
+              {
+                title: "The Power of Mindfulness Meditation",
+                excerpt: "Learn how mindfulness meditation can help you manage stress and improve your overall well-being.",
+                link: "/blog/mindfulness-meditation"
+              },
+              {
+                title: "10 Tips for Effective Stress Management",
+                excerpt: "Explore practical tips and techniques for managing stress in your daily life.",
+                link: "/blog/stress-management-tips"
+              },
+              {
+                title: "How to Cultivate a Positive Mindset",
+                excerpt: "Discover strategies to develop and maintain a positive mindset for better mental health.",
+                link: "/blog/positive-mindset"
+              },
+              {
+                title: "Healthy Eating for Mental Wellness",
+                excerpt: "Understand the connection between diet and mental health, and get tips on eating well.",
+                link: "/blog/healthy-eating-mental-wellness"
+              }
+            ].map((article, index) => (
+              <div className="col-md-6 mt-4" key={index}>
+                <div className="article-box p-3" style={{ border: '1px solid #ddd', borderRadius: '8px', backgroundColor: '#fff' }}>
+                  <h5>{article.title}</h5>
+                  <p>{article.excerpt}</p>
+                  <a href={article.link} className="btn btn-primary">Read More</a>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
 
       {/* Footer Section */}
       <footer className="text-dark py-4 footer-custom">
