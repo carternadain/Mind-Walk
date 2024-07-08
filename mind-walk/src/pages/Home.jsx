@@ -254,7 +254,7 @@ const Home = () => {
                 <div className="article-box p-3" style={{ border: '1px solid #ddd', borderRadius: '8px', backgroundColor: '#fff' }}>
                   <h5>{article.title}</h5>
                   <p>{article.excerpt}</p>
-                  <a href={article.link} className="btn btn-primary">Read More</a>
+                  <a href={article.link} className="btn btn-dark">Read More</a>
                 </div>
               </div>
             ))}
