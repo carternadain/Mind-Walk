@@ -14,10 +14,10 @@ export function MainLayout({ children }) {
                      {/* Left side with unordered list */}
                      <div className="col-md-6">
                          <ul className="list-unstyled">
-                             <li><a href="#" className="text-dark mx-2">Help and support</a></li>
-                             <li><a href="#" className="text-dark mx-2">About us</a></li>
-                             <li><a href="#" className="text-dark mx-2">Accessibility statement</a></li>
-                             <li><a href="#" className="text-dark mx-2">Contact</a></li>
+                             <li><a href="/" className="text-dark mx-2">Help and support</a></li>
+                             <li><a href="/" className="text-dark mx-2">About us</a></li>
+                             <li><a href="/" className="text-dark mx-2">Accessibility statement</a></li>
+                             <li><a href="/" className="text-dark mx-2">Contact</a></li>
                          </ul>
                      </div>
 
