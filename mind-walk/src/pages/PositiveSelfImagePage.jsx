@@ -20,7 +20,7 @@ const PositiveSelfImagePage = () => {
       <div className="container mt-4">
         <div className="row justify-content-center">
           <div className="col-md-6">
-            <img src={mountain} alt="Self-Image Improvement" className="img-fluid rounded mb-4" />
+            <img src={mountain} alt="Self Improvement" className="img-fluid rounded mb-4" />
             <div className="border border-secondary rounded p-4 text-center">
               <h3>Understanding Self-Image</h3>
               <p>Your self-image is how you perceive yourself, including your thoughts, beliefs, and feelings about your appearance, abilities, and worth. It influences your behavior, interactions with others, and overall quality of life. Developing a positive self-image involves challenging negative thoughts, practicing self-compassion, and embracing your uniqueness.</p>
