@@ -18,6 +18,10 @@ jobs:
         with:
           node-version: '16'
 
+      - name: Update caniuse-lite
+        run: npx update-browserslist-db@latest
+        working-directory: ./mind-walk
+
       - name: Install dependencies
         run: npm install
         working-directory: ./mind-walk
