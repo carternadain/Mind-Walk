@@ -222,7 +222,7 @@ const Home = () => {
       {/* Blog/Articles Section */}
       <div className="blog-articles-section py-5 bg-light">
         <div className="container">
-          <h2 className="text-center mb-4">Blog/Articles</h2>
+          <h2 className="text-center mb-4">Blogs & Articles</h2>
           <p className="text-center mb-4">
             Discover insightful articles and blog posts about mental wellness, mindfulness, and stress management.
           </p>
