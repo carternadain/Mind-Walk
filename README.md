@@ -1,10 +1,10 @@
 # Mind Walk
 
-Mind Walk is a self-help app designed to guide you on a journey towards stress relief, pressure management, and a positive self-image. Take a step towards a healthier mind and a more fulfilling life with Mind Walk.
+Mind Walk is a self-help app designed to guide you on a journey towards stress relief, pressure management, and a positive self-image. Take a step towards a healthier mind and a better life with Mind Walk.
 
 ## Live Site
 
-Visit the live site: [Mind Walk](https://letstakeamindwalk.netlify.app/)
+Visit the live site: [Mind Walk](http://mind-walk.web.app)
 
 ## Features
 
